@@ -25,13 +25,17 @@ iAmAlive script confirms if a host is reachable and triggers a collaborative act
 The idea is to demonstrate the capabilities of APIC-EM [^1] as well as Tropo APIs and how they can be leveraged on to facilitate collaboration within distributed teams.
 
 ### Flow
+
+
 ![](/img/iamalive.png)
+
 
 ### Prerequisites
 
 * Python
 * Tropo Account with Outbound SMS and Call capabilities
 * Access to an APIC-EM Platform [^2]
+
 
 ### Code
 
