@@ -20,7 +20,7 @@ protocol = "https://"
 	name = "Wilber Wanjira"
 	job = "Network Development Engineer"
 	description = "Networks, Scripts, Musings, R"
-	bio = "[Networks](https://www.wilber.co.ke/categories/network) | [Scripts](https://www.wilber.co.ke/categories/scripts) | [Writing](https://www.wilber.co.ke/categories/writing)"
+	bio = "[Networks](https://www.wilber.co.ke/categories/networks) | [Scripts](https://www.wilber.co.ke/categories/scripts) | [Writing](https://www.wilber.co.ke/categories/writing)"
 
 	github = "wilberCisco"
 	enableRSS = true
