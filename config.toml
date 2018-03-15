@@ -1,6 +1,6 @@
 # Site settings
-#baseurl = "https://wilber.co.ke/"
-baseurl = "https://goofy-fermat-cf4c60.netlify.com/"
+baseurl = "https://wilber.co.ke/"
+
 canonifyurls = true
 languageCode = "en"
 title = "Network Development Engineer"
