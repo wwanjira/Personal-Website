@@ -27,19 +27,13 @@
   </url>
   
   <url>
-    <loc>/tags/cisco.html</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/cisco.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/documentation.html</loc>
+    <loc>/tags/cisco.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -51,8 +45,8 @@
   </url>
   
   <url>
-    <loc>/tags/internet-of-things.html</loc>
-    <lastmod>2016-05-10T00:00:00+00:00</lastmod>
+    <loc>/tags/documentation.html</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -63,7 +57,7 @@
   </url>
   
   <url>
-    <loc>/tags/iot.html</loc>
+    <loc>/tags/internet-of-things.html</loc>
     <lastmod>2016-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -75,13 +69,13 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <loc>/tags/iot.html</loc>
+    <lastmod>2016-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/networks.html</loc>
+    <loc>/</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -93,13 +87,13 @@
   </url>
   
   <url>
-    <loc>/post.html</loc>
+    <loc>/tags/networks.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/python.html</loc>
+    <loc>/post.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -111,14 +105,14 @@
   </url>
   
   <url>
-    <loc>/tags/safaricom.html</loc>
-    <lastmod>2015-08-17T00:00:00+00:00</lastmod>
+    <loc>/tags/python.html</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/scripts.html</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <loc>/tags/safaricom.html</loc>
+    <lastmod>2015-08-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -129,13 +123,19 @@
   </url>
   
   <url>
-    <loc>/tags/service-provider.html</loc>
-    <lastmod>2015-08-17T00:00:00+00:00</lastmod>
+    <loc>/tags/scripts.html</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/service-provider.html</loc>
+    <lastmod>2015-08-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/service-provider.html</loc>
     <lastmod>2015-08-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
