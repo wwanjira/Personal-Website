@@ -1,0 +1,542 @@
+    <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Wilber Wanjira">
+		<meta name="description" content="Networks, Scripts, Musings, R">
+		<meta name="generator" content="Hugo 0.37.1" />
+		<title>SIP over MPLS - Service Implementation &middot; Network Development Engineer</title>
+		<link rel="shortcut icon" href="/images/favicon.ico">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/highlight.css">
+		
+		
+		<link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+		
+
+		
+		<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Network Development Engineer" />
+		
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='/projects'>Projects</a>
+	<a href='/tags'>Tags</a>
+	<a href='/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="/index.xml">Subscribe</a>
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        SIP over MPLS - Service Implementation
+                    </h1>
+                    <h2 class="headline">
+                    Aug 17, 2015
+                    · 1038 words
+                    · 5 minutes read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="/tags/documentation">documentation</a>
+                          
+                              <a href="/tags/networks">networks</a>
+                          
+                              <a href="/tags/service-provider">service provider</a>
+                          
+                              <a href="/tags/safaricom">safaricom</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <center>
+<a href="https://wilber.co.ke/about">Wilber O. Wanjira<sup>1</sup></a> and <a href="https://www.linkedin.com/in/juma-kevin-85a51932/">Juma O. Kevin<sup>2</sup></a> <br />
+Principal Engineer - Integration<sup>1</sup> and Senior Engineer - Core Planning (Voice)<sup>2</sup>
+</center>
+<div id="introduction" class="section level3">
+<h3>Introduction</h3>
+<p>In this document, we share the deployed network architecture to provide SIP over MPLS. This model adopts the <a href="https://en.wikipedia.org/wiki/Session_Initiation_Protocol">SIP protocol</a> as signaling to set up a call and <a href="https://en.wikipedia.org/wiki/Multiprotocol_Label_Switching">MPLS</a> as a core network forwarding mechanism. SIP over MPLS will provide an alternative to SIP over dedicated Internet Access (the current and more typical deployment approach).</p>
+<blockquote>
+<p>The benefits of running SIP over MPLS</p>
+</blockquote>
+<ul>
+<li>Cross Platform Deployment - Unlocks deploying SIP over LTE, WIMAX &amp; BESPOKE Solutions</li>
+<li>Security; MPLS avoids exposure to the public internet, making SIP over MPLS more secure than over other transport options.</li>
+<li>Improved call quality with low latency.</li>
+<li>Less jitter</li>
+<li>Better capacity control</li>
+<li>End-to-End Quality of Service; MPLS will transport SIP using labels that will define the destination <a href="https://en.wikipedia.org/wiki/Session_border_controller">(Session Border Controller (SBC))</a> and the class of service it should receive. (explicit null)</li>
+<li>Avoiding usage of public IPs which are limited resources</li>
+<li>Ease of implementation as complex router configurations (over public deployments) are not required.</li>
+<li>DRVS: Disaster Recovery Voice Signaling - Have the larger customer connected to both SBCs for redundancy.
+.</li>
+</ul>
+</div>
+<div id="core-configuration-layout" class="section level3">
+<h3>Core Configuration &amp; Layout</h3>
+<blockquote>
+<p><strong>Deployed e2e SIP Service delivery over MPLS [Schematic]</strong></p>
+</blockquote>
+<p><img src="/img/e2e.png" /></p>
+<blockquote>
+<p><strong>Connectivity between the SBC and Enterprise Core [Schematic &amp; Configurations]</strong></p>
+</blockquote>
+<p><img src="/img/sbc_en_con.png" style="width:90.0%" /></p>
+<p><strong>Physical &amp; Logical Layout</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Ports</th>
+<th align="right">IP</th>
+<th align="right">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">GigabitEthernet0/0/0/9</td>
+<td align="right">x</td>
+<td align="right">primary physical link to SBC</td>
+</tr>
+<tr class="even">
+<td align="right">GigabitEthernet1/0/0/9</td>
+<td align="right">x</td>
+<td align="right">secondary physical link to SBC</td>
+</tr>
+<tr class="odd">
+<td align="right">Bundle-Ether555</td>
+<td align="right">10.66.56.224/30</td>
+<td align="right">primary logical link to SBC</td>
+</tr>
+<tr class="even">
+<td align="right">Bundle-Ether556</td>
+<td align="right">10.66.56.228/30</td>
+<td align="right">secondary logical link to SBC</td>
+</tr>
+<tr class="odd">
+<td align="right">x</td>
+<td align="right">10.66.56.138/32</td>
+<td align="right">SBC Signaling</td>
+</tr>
+<tr class="even">
+<td align="right">x</td>
+<td align="right">10.65.83.97/32</td>
+<td align="right">SBC Media</td>
+</tr>
+</tbody>
+</table>
+<p><strong>QOA SBC PE Interface IPs</strong></p>
+<pre><code>#physical interfaces configuration
+interface GigabitEthernet1/0/5
+ description to EBT_ASR_PE01 G0/0/0/9
+ undo shutdown
+ ip address 10.66.56.225 255.255.255.252
+ 
+interface GigabitEthernet2/0/5
+ description to EBT_ASR_PE02 G0/0/0/9
+ undo shutdown
+ ip address 10.66.56.229 255.255.255.252</code></pre>
+<pre><code>#logical interface and route configuration
+interface signal-if 3/0/4
+description EBT_Signal_Service_IP
+ip address 10.66.56.138 255.255.255.255
+quit
+
+ip route-static 10.221.0.0 255.255.255.0 10.66.56.226 description EBT_ASR_Signal
+ip route-static 10.221.0.0 255.255.255.0 10.66.56.230 description EBT_ASR_Signal
+
+sbc wellknownport clientaddr  10.66.56.138 sip 5060</code></pre>
+<p><strong>SIP Trunk Configurations</strong></p>
+<pre><code>#QOAGTMSS
+ADD OFC: ON=&quot;EBTTEST_SIP&quot;, OOFFICT=CMPX, DOL=SAME, BOFCNO=1099, OFCTYPE=COM, SIG=SIP, SVQE=NO;
+ADD BILLCTRL: OFFICENAME=&quot;EBTTEST_SIP&quot;, OOFFICT=OTHERNET, TZDSTNAME=&quot;INVALID&quot;;
+ADD OFCMGW: ON=&quot;EBTTEST_SIP&quot;, MGWNAME=&quot;QOA_QOAGTMGW&quot;;
+ADD SRT: SRN=&quot;QOA_SRT_EBTTEST_SIP&quot;, ON=&quot;EBTTEST_SIP&quot;, BFSM=INVALID;
+ADD RT: RN=&quot;QOA_RT_EBTTEST_SIP&quot;, SR1N=&quot; QOA_SRT_EBTTEST_SIP&quot;;
+ADD RTANA: RSN=&quot;QOA_RSN_EBTTEST_SIP&quot;, RSSN=&quot;ALL&quot;, RN=&quot;QOA_RT_EBTTEST_SIP&quot;, ISUP=SIP_M;
+
+ADD SIPTG: TGN=&quot;QOA_QOASBC_EBTTEST_CDC_SIP&quot;, CSCN=&quot;QOA_SIPTRUNK&quot;, SRTN=&quot;QOA_SRT_EBTTEST_SIP&quot;, BTG=1099, SBT=UDP, LOCALIP=&quot;10.66.52.2&quot;, OSU=&quot;10.66.57.129:5060&quot;, ISST=YES, ENTYPE=MSC, SIPRED=NO, IFADJUSTDATACODEC=NO;</code></pre>
+<pre><code>#Logical Interface Configurations
+interface signal-if 3/0/56
+description EBUTEST_Signal_service_IP
+ip address 10.66.57.129 255.255.255.255
+quit
+#
+sbc mapgroup intercom-ip 11110
+ description From_EBTTEST_To_Safaricom_Mapgroup
+ clientaddr  10.66.56.138
+ serveraddr  10.66.57.129 
+ softxaddr 5  10.66.52.2
+ softxaddr 10  10.66.52.10
+ media-clientaddr 5  10.65.83.97
+ media-serveraddr 5  10.66.56.254
+ match source 10.221.0.2
+ enable
+#
+sbc mapgroup intercom-ip 11120
+ description From_Safaricom_To_EBTTEST_Mapgroup
+ match source 0 begin 10.66.52.2 end 10.66.52.2
+ match source 1 begin 10.66.52.10 end 10.66.52.10
+ clientaddr  10.66.57.129
+ serveraddr  10.66.56.138
+ softxaddr 10.221.0.2
+ media-clientaddr 5  10.66.56.254
+ media-serveraddr 5  10.65.83.97
+ enable
+#
+sbc wellknownport clientaddr 10.66.57.129 sip 5060
+sbc wellknownport softxaddr 10.221.0.2 sip 5060
+#
+sbc iptrunk-intercom 58
+ip 10.221.0.2 port 5060
+description EBUTEST_SIP 
+bind-mapgroup 11110   
+enable
+quit
+#</code></pre>
+<pre><code>#PE SBC Interface Configuration
+interface Bundle-Ether555
+vrf SBC_MPLS
+ipv4 address 10.66.56.226/30
+!
+interface Bundle-Ether556
+vrf SBC_MPLS
+ ipv4 address 10.66.56.230/30</code></pre>
+<p><code>VRF Name &gt; SBC_MPLS</code> <code>RD &gt; 37061:749</code> <code>Route Target Filters &gt; SIP_SBC_Allowed_Subnets_Import, SIP_SBC_Signaling_Peer</code></p>
+<pre><code>#PE - SBC Failover Trigger
+ipsla
+operation 100
+  type icmp echo
+   vrf SBC_MPLS
+   destination address 10.66.56.225
+   statistics hourly
+    buckets 2
+   !
+   timeout 5000
+   frequency 60
+  !
+!
+schedule operation 100
+  start-time now
+  life forever
+!
+track 100
+type rtr 100 reachability
+delay up 2
+delay down 2
+!
+router static
+ vrf SBC_MPLS
+  address-family ipv4 unicast
+   10.65.83.97/32 10.66.56.225 description QOASBC_Media_Primary track 100
+   10.65.83.97/32 10.66.56.229 5 description QOASBC_Media_Secondary
+   10.66.56.138/32 10.66.56.225 description QOASBC_Signaling_Primary track 100
+   10.66.56.138/32 10.66.56.229 5 description QOASBC_Signaling_Secondary</code></pre>
+<blockquote>
+<p><strong>Customer VRF Configurations</strong></p>
+</blockquote>
+<p><strong>Schematic</strong></p>
+<p><img src="/img/cust_vrf.png" style="width:70.0%" /></p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Customer MPLS Block</th>
+<th align="right">VRF Name</th>
+<th align="right">RD</th>
+<th align="right">Interface</th>
+<th align="right">Route-Target Import</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">172.30.1.0/30</td>
+<td align="right">CUST_A</td>
+<td align="right">37061:456</td>
+<td align="right">Vlan 1000</td>
+<td align="right">37061:750</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Head End (PE) Configurations</strong></p>
+<pre><code>#customer VRF configuration
+vrf definition CUST_A
+ rd 100:456
+ route-target export 37061:456
+ route-target import 37061:456
+ route-target import 37061:750
+ !
+ address-family ipv4
+ exit-address-family
+!
+!
+interface vlan 1000
+ vrf forwarding CUST_A
+ ip address 172.30.1.1 255.255.255.252
+!
+router bgp 37061
+ !
+ address-family ipv4 vrf CUST_A
+  redistribute connected
+    redistribute eigrp 456
+ exit-address-family
+!         
+router eigrp 110
+!         
+address-family ipv4 vrf CUST_A as 456
+  redistribute connected
+  redistribute bgp 37061 metric 10000 1 100 1 1500
+  network 172.30.1.0 0.0.0.3
+ exit-address-family
+!
+end
+</code></pre>
+<pre><code>#SIPoMPLS VRF configuration
+vrf definition SBC_MPLS
+ route-target import 37061:456
+
+Import CUST_A route target community
+
+extcommunity-set rt SIP_RT
+  37061:750
+end-set
+
+#Import SBC filter rt into the Customer vrf.</code></pre>
+<blockquote>
+<p><strong>Customer Edge (CE) Configurations</strong></p>
+</blockquote>
+<p><strong>Deployment Model #1</strong> - Link terminates on a Router. Customer PBX has WAN Port</p>
+<center>
+<img src="/img/cust_ce_opt1.png" alt="." style="width:70.0%" />
+</center>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Customer MPLS Block</th>
+<th align="right">SIP over MPLS Block</th>
+<th align="right">Protocol</th>
+<th align="right">WAN</th>
+<th align="right">LAN</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">172.30.1.0/30</td>
+<td align="right">10.221.0.0/30</td>
+<td align="right">EIGRP 456</td>
+<td align="right">FastEth0/0</td>
+<td align="right">FastEth0/1</td>
+</tr>
+</tbody>
+</table>
+<pre><code>#Customer Router Configurations
+interface FastEthernet0/0
+ ip address 172.30.1.2 255.255.255.252
+!
+interface FastEthernet0/1
+ ip address 10.221.0.2 255.255.255.252
+!
+router eigrp SIPoMPLS
+ !
+ address-family ipv4 unicast as 456
+  !
+  topology base
+  exit-af-topology
+  network 10.221.0.0 0.0.0.3
+  network 172.30.1.0 0.0.0.3
+!</code></pre>
+<p><em>PBX will terminate on interface F0/2; directly or through a LAN switch.
+PBX port will be configured on the block range: on this example, the pbx IP will be 10.100.0.2/30 with a default gateway of 10.100.0.1
+The block should be able to ping the SBC private MPLS IPs (Signaling and Media)</em></p>
+<p><strong>Deployment Model #2</strong> - NAT</p>
+<center>
+<img src="/img/cust_ce_opt2.png" alt="." style="width:70.0%" />
+</center>
+<table>
+<thead>
+<tr class="header">
+<th align="right">MPLS Block</th>
+<th align="right">SIP over MPLS Block</th>
+<th align="right">Protocol</th>
+<th align="right">PBX IP</th>
+<th align="right">WAN</th>
+<th align="right">LAN</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">172.30.1.0/30</td>
+<td align="right">10.221.0.0/30</td>
+<td align="right">EIGRP 456</td>
+<td align="right">192.168.0.2</td>
+<td align="right">FastEth0/0</td>
+<td align="right">FastEth0/1</td>
+</tr>
+</tbody>
+</table>
+<pre><code>#Customer Router Configurations - one to one NAT
+interface FastEthernet0/0
+ ip address 172.30.1.2 255.255.255.252
+ ip nat outside
+!
+interface FastEthernet0/1
+ description SIP
+ ip address 192.168.0.1 255.255.255.252
+ ip nat inside
+!
+!
+router eigrp SIPoMPLS
+ address-family ipv4 unicast as 456
+  topology base
+  exit-af-topology
+  network 10.221.0.0 0.0.0.3
+  network 172.30.1.0 0.0.0.3
+!
+ip nat inside source static 192.168.0.2 10.221.0.2
+!</code></pre>
+<p><em>Deployed when customer already has an established PBX/ Voice LAN.Gateway of PBX has to be set to the router for NAT to function.</em></p>
+<pre><code>#Customer Router Configurations - PAT
+access-list 114 permit udp any any range 10000 12000
+ip nat pool voip-rtp 192.168.0.2 192.168.0.2 netmask 255.255.255.252 type rotary
+ip nat inside source static udp 192.168.0.2 5060 10.221.0.2 5060 extendable
+ip nat inside destination list 114 pool voip-rtp</code></pre>
+<p><em>Signaling port 5060 | Media Port Range 10000 - 20000</em></p>
+<p><strong>Deployment Model #3</strong> - Link terminates directly to PBX</p>
+<center>
+<img src="/img/cust_ce_opt3.png" alt="." style="width:70.0%" />
+</center>
+<table>
+<thead>
+<tr class="header">
+<th align="right">MPLS Block</th>
+<th align="right">SIP over MPLS Block</th>
+<th align="right">Protocol</th>
+<th align="right">PBX IP</th>
+<th align="right">WAN Interface</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">10.100.0.0/30</td>
+<td align="right">x</td>
+<td align="right">Static Route</td>
+<td align="right">10.100.0.0</td>
+<td align="right">PBX WAN Interface</td>
+</tr>
+</tbody>
+</table>
+<p><em>MPLS IP configured on the PBX | PBX Gateway configured at the PE</em></p>
+<hr />
+<blockquote>
+<p>SIPoMPLS - Service Implementation (SIPoMPLS-SAFARICOM-01)</p>
+</blockquote>
+<p><em>Updated: 2015</em></p>
+</div>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://github.com/wilberCisco">
+                        <img class="avatar" src="/images/avatar.png">
+                        <div>
+                            <span class="dark">Wilber Wanjira</span>
+                            <span>Network Development Engineer</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    
+<a class="twitter" href="https://twitter.com/intent/tweet?text=%2fpost%2fsip-over-mpls-service-implementation.html - SIP%20over%20MPLS%20-%20Service%20Implementation "><span class="icon-twitter"> Tweet</span></a>
+
+
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'wwanjira'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://github.com/wilberCisco">
+        <i class="fab fa-github-square fa-sm"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/wilberwanjira/">
+        <i class="fab fa-linkedin fa-sm"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/iam_wilber">
+        <i class="fab fa-twitter-square fa-sm"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fas fa-coffee"></i> Wilber Wanjira
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script async src="//yihui.name/js/center-img.js"></script>
+<script src="/js/jquery-2.2.4.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.configure({languages: []});
+hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+
+    </body>
+</html>

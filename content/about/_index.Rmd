@@ -1,0 +1,12 @@
+---
+title: "About"
+output: html_document
+---
+
+<p>Click the link for my <a href="/docs/WilberforceOchiengWanjira_CV.pdf">resume</a>.</p>
+
+<p class="working">Currently working @ <a class="company" href="https://cisco.com" target="_blank"><img src="/images/cisco.png" alt="Cisco Systems" style="width:40px;height:20px;"></a></p>
+
+<p class="large-description">I am interested in network development, open source, design and scripting. INTJ, with a self-critical perfectionist sense that drives me to always improve myself.</p>
+
+Big fan of Space technology 

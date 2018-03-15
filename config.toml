@@ -1,0 +1,50 @@
+# Site settings
+baseurl = "https://wilber.co.ke/"
+canonifyurls = true
+languageCode = "en"
+title = "Network Development Engineer"
+theme = "hugo-theme-cactus-plus"
+googleAnalytics = ""
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+#paginate = 3
+
+uglyurls = true
+#[permalinks]
+# post = "/:year/:month/:day/:slug/"
+
+[outputFormats.MyEnrichedFormat]
+protocol = "https://"
+
+[params]
+	name = "Wilber Wanjira"
+	job = "Network Development Engineer"
+	description = "Networks, Scripts, Musings, R"
+	bio = "[Networks](https://wilber.co.ke/categories/network) | [Scripts](https://wilber.co.ke/categories/scripts) | [Writing](https://wilber.co.ke/categories/writing)"
+
+	github = "wilberCisco"
+	enableRSS = true
+	
+	title404 = "This is not the web page you are looking for."
+	subtitle404 = "Perhaps your father wanted you to browse this page when you were old enough, but your uncle wouldn't allow it. He feared you might follow old Obi-Wan on some damn fool idealistic crusade like your father did..."
+
+	disqusShortname = "wwanjira"
+	enableDisqus = true
+
+	enableGoogleAnalytics = true
+
+	custom_css = []
+	customJS  = []
+
+	aboutAuthor = "Network Development Engineer"
+
+	iconFont = "font-awesome"
+  
+  shareOnTwitter = true
+
+  shareOnFacebook = true
+
+[social]
+
+  github-square = "https://github.com/wilberCisco"
+  linkedin = "https://www.linkedin.com/in/wilberwanjira/"
+  twitter-square = "https://www.twitter.com/iam_wilber"

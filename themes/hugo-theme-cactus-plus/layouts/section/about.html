@@ -1,0 +1,15 @@
+{{ partial "head.html" . }}
+<body>
+{{ partial "nav.html" . }}
+{{ partial "profile2.html" . }}
+
+<section id="wrapper" class="home">
+  
+<img src="{{ .Site.BaseURL }}images/CCIE-logo.png" alt="CCIE #50688" align="middle" style="max-height: 100px; max-width: 100px;" />  
+    {{ .Content }}
+
+    {{ partial "footer.html" . }}
+</section>
+
+{{ partial "js.html" . }}
+</body>

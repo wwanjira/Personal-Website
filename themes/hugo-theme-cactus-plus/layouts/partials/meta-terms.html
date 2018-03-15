@@ -1,0 +1,11 @@
+<!--{{ if .Params.categories }}
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;{{ range $index, $category := .Params.categories }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" rel="category tag">{{ . }}</a>{{ end }}
+{{ end }}-->
+
+{{ if .Params.tags }}
+<i class="fa fa-tags"></i>
+  {{ range $index, $tag := .Params.tags }}{{ if gt $index 0 }}{{ end }}
+<code href='{{ "/tags/" | relLangURL }}' rel="tag">{{ . }}</code>{{ end }}
+{{ end }}
+
+{{- /* vim: set ts=2 sw=2 et: */}}
