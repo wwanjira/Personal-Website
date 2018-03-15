@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "https://wilber.co.ke/"
+baseurl = "https://www.wilber.co.ke/"
 
 canonifyurls = true
 languageCode = "en"
