@@ -28,7 +28,7 @@ protocol = "https://"
 	title404 = "This is not the web page you are looking for."
 	subtitle404 = "Oo"
 
-	disqusShortname = "wwanjira"
+	disqusShortname = "wilberwanjira"
 	enableDisqus = true
 
 	enableGoogleAnalytics = true
