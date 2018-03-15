@@ -15,7 +15,7 @@ categories:
 - service provider
 ---
 <center>
-[Wilber O. Wanjira^1^](https://wilber.co.ke/about) and [Juma O. Kevin^2^](https://www.linkedin.com/in/juma-kevin-85a51932/) <br />
+[Wilber O. Wanjira^1^](https://www.wilber.co.ke/about) and [Juma O. Kevin^2^](https://www.linkedin.com/in/juma-kevin-85a51932/) <br />
 Principal Engineer - Integration^1^ and Senior Engineer - Core Planning (Voice)^2^
 </center>
 
