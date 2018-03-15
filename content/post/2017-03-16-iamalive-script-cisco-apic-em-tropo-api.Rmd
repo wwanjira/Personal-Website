@@ -208,7 +208,7 @@ Stropo outbound call script (.js)
        network:"SMS"} );
     say("Hi " + adminName + ", " + msg + "!");
 ````
-***
+
 
 [^1]:delivers software-defined networking (SDN) to the enterprise WAN, campus, and branch networks. [more info](https://www.cisco.com/c/en/us/products/cloud-systems-management/application-policy-infrastructure-controller-enterprise-module/index.html)
 
