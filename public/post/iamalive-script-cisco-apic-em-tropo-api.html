@@ -1,0 +1,348 @@
+    <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Wilber Wanjira">
+		<meta name="description" content="Networks, Scripts, Musings, R">
+		<meta name="generator" content="Hugo 0.37.1" />
+		<title>iAmAlive Script ( APIC-EM &amp; Tropo API ) &middot; Network Development Engineer</title>
+		<link rel="shortcut icon" href="/images/favicon.ico">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/highlight.css">
+		
+		
+		<link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+		
+
+		
+		<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Network Development Engineer" />
+		
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='/projects'>Projects</a>
+	<a href='/tags'>Tags</a>
+	<a href='/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="/index.xml">Subscribe</a>
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        iAmAlive Script ( APIC-EM &amp; Tropo API )
+                    </h1>
+                    <h2 class="headline">
+                    Mar 16, 2017
+                    · 541 words
+                    · 3 minutes read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="/tags/documentation">documentation</a>
+                          
+                              <a href="/tags/networks">networks</a>
+                          
+                              <a href="/tags/scripts">scripts</a>
+                          
+                              <a href="/tags/python">python</a>
+                          
+                              <a href="/tags/cisco">cisco</a>
+                          
+                              <a href="/tags/tropo">tropo</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <div id="iamalive-script" class="section level3">
+<h3>iAmAlive Script</h3>
+<p>iAmAlive script confirms if a host is reachable and triggers a collaborative action via <a href="https://www.tropo.com/">Tropo</a>; Tropo will send an sms to the network admin if the host is reachable or call the network admin if the host is unreachable.</p>
+<p>The idea is to demonstrate the capabilities of APIC-EM [^1] as well as Tropo APIs and how they can be leveraged on to facilitate collaboration within distributed teams.</p>
+</div>
+<div id="flow" class="section level3">
+<h3>Flow</h3>
+<p><img src="/img/iamalive.png" /></p>
+</div>
+<div id="prerequisites" class="section level3">
+<h3>Prerequisites</h3>
+<p>Python
+Tropo Account with Outbound SMS and Call capabilities
+APIC-EM always on logins [^2]- sandboxapic.cisco.com</p>
+</div>
+<div id="code" class="section level3">
+<h3>Code</h3>
+<blockquote>
+<p>configuration file (iAmAlive_config.cfg)</p>
+</blockquote>
+<pre><code>[APIC_EM]
+APIC_URL = 
+APIC_USER = 
+APIC_PASSWD = 
+PROXY = No
+
+[TROPO]
+ADMIN_NAME = 
+TROPO_MSG_NUMBER = 
+TROPO_CALL_NUMBER = 
+TROPO_MSG_TOKEN = 
+TROPO_CALL_TOKEN = </code></pre>
+<blockquote>
+<p>python script file (iAmAlive.py)</p>
+</blockquote>
+<pre><code>#!/usr/bin/env python
+
+#import modules
+
+from pprint import pprint
+from pprint import pformat
+
+import json
+import requests
+import ConfigParser
+import io
+import sys
+import re
+import os
+
+# Disable Certificate warning
+try:
+  requests.packages.urllib3.disable_warnings()
+except:
+  pass
+
+reload(sys)
+sys.setdefaultencoding(&#39;utf-8&#39;)
+
+##############################################################################
+# READ VARIABLES
+##############################################################################
+
+config = ConfigParser.ConfigParser()
+config.read(&#39;iAmAlive_config.cfg&#39;)
+
+#apic variables
+APIC_URL = config.get(&quot;APIC_EM&quot;,&quot;APIC_URL&quot;)
+APIC_USER = config.get(&quot;APIC_EM&quot;,&quot;APIC_USER&quot;)
+APIC_PASSWD = config.get(&quot;APIC_EM&quot;,&quot;APIC_PASSWD&quot;)
+PROXY = config.get(&quot;APIC_EM&quot;,&quot;PROXY&quot;)
+
+# Creates APIC_BASE url based on APIC_URL
+APIC_BASE = &#39;https://%s/api/v1&#39; % APIC_URL
+
+# Makes Proxy Exception if configured 
+if PROXY == &quot;No&quot;:
+  os.environ[&#39;no_proxy&#39;] = &#39;%s&#39; % APIC_URL
+
+#tropo variables
+TROPO_MSG_TOKEN = config.get(&quot;TROPO&quot;,&quot;TROPO_MSG_TOKEN&quot;)
+TROPO_CALL_TOKEN = config.get(&quot;TROPO&quot;,&quot;TROPO_CALL_TOKEN&quot;)
+ADMIN_NAME = config.get(&quot;TROPO&quot;,&quot;ADMIN_NAME&quot;)
+TROPO_MSG_NUMBER = config.get(&quot;TROPO&quot;,&quot;TROPO_MSG_NUMBER&quot;)
+TROPO_CALL_NUMBER = config.get(&quot;TROPO&quot;,&quot;TROPO_CALL_NUMBER&quot;)
+
+# Creates TROPO url                                         - recheck this 
+TROPO_SESSION = &#39;https://api.tropo.com/1.0/sessions?action=create&amp;token=&#39;
+
+##############################################################################
+# Start API Session APIC_EM
+##############################################################################
+
+apic_credentials = json.dumps({&#39;username&#39;:APIC_USER,&#39;password&#39;:APIC_PASSWD})
+tmp_headers = {&#39;Content-type&#39;: &#39;application/json&#39;}
+tmp_get = &#39;%s/ticket&#39; % APIC_BASE
+print(&quot;Connecting to APIC-EM ...&quot;+&#39;\r\n&#39;)
+req = requests.post(tmp_get, data=apic_credentials, verify=False, headers=tmp_headers)
+
+# Add session ticket to my http header for subsequent calls
+apic_session_ticket = req.json()[&#39;response&#39;][&#39;serviceTicket&#39;]
+apic_headers = {&#39;Content-type&#39;: &#39;application/json&#39;, &#39;X-Auth-Token&#39;: apic_session_ticket}
+print(&quot;Connecting to APIC-EM Done&quot; +&#39;\r\n&#39;)
+
+# tropo header
+tropo_header = {&quot;content-type&quot;: &quot;application/json&quot;}
+
+def getHost():
+    #global host_list
+
+    url = &#39;%s/host&#39; % APIC_BASE
+    req_inv = requests.get(url,verify=False, headers=apic_headers)
+    parsed_result = req_inv.json()
+    
+    #convert data to json format.
+    req_list = parsed_result[&#39;response&#39;]
+    
+    host_list = []
+    i = 0
+    for item in req_list:
+        i = i + 1
+        host_list.append([i,str(item[&quot;hostType&quot;]),str(item[&quot;hostIp&quot;])])
+    return host_list;
+
+##############################################################################
+# iAmAlive Checker
+##############################################################################
+
+ip = raw_input(&quot; [&gt;] Enter IPv4 host address to check:  &quot;)
+
+if re.match(r&#39;^((\d{1,2}|1\d{2}|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d{2}|2[0-4]\d|25[0-5])$&#39;, ip):  
+    print &quot;\nValid IPv4\n&quot;  
+else:
+    print &quot;\nInvalid IPv4... come on! - back to basics bro!...\n&quot;
+    quit()
+    
+##############################################################################
+# Checking if this IP is used by a host...
+##############################################################################
+
+print &quot;Checking if the HOST is Online...\n&quot;
+isOnline = 0
+for row in getHost():
+    if row[2] == ip:
+        isOnline = 1
+        break
+
+if isOnline == 1:
+    print (&quot;IP address %s is currently used by a host connected via %s\n&quot; % (ip,row[1]))
+    
+    #trigger an sms to admin via tropo
+    payload = {
+               &quot;token&quot;:TROPO_MSG_TOKEN, &quot;adminName&quot;:ADMIN_NAME, &quot;numberToDial&quot;:TROPO_MSG_NUMBER, &quot;msg&quot;: ip + &quot; is Reachable!&quot;
+              }
+    
+    #Performs a POST to tropo to send an sms to the admin
+    response= requests.post(TROPO_SESSION,data=json.dumps(payload))
+    
+else:
+    print (&quot;HOST %s is currently offline! .. calling network admin\n&quot; % ip)
+
+    #tropo 
+    payload = {
+               &quot;token&quot;:TROPO_CALL_TOKEN, &quot;adminName&quot;:ADMIN_NAME, &quot;numberToDial&quot;:TROPO_CALL_NUMBER, &quot;msg&quot;: ip + &quot; is Down!, Server is Down!&quot;
+              }
+    
+    #Performs a POST to tropo to send an sms to the admin
+    response= requests.post(TROPO_SESSION,data=json.dumps(payload))</code></pre>
+<blockquote>
+<p>Tropo Codes (call and sms)</p>
+</blockquote>
+<pre><code>Stropo outbound call script (.js)
+
+    call([&quot;+1&quot; + numberToDial], 
+        {&quot;callerID&quot;: &#39;+25472966xxx4&#39;})
+    say(&quot;Hello &quot; + adminName + &quot;, &quot; + msg + &quot;!&quot;)
+
+#tropo outbound sms script (.js)
+
+    call(numberToDial,{
+       network:&quot;SMS&quot;} );
+    say(&quot;Hi &quot; + adminName + &quot;, &quot; + msg + &quot;!&quot;);</code></pre>
+</div>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://github.com/wilberCisco">
+                        <img class="avatar" src="/images/avatar.png">
+                        <div>
+                            <span class="dark">Wilber Wanjira</span>
+                            <span>Network Development Engineer</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    
+<a class="twitter" href="https://twitter.com/intent/tweet?text=%2fpost%2fiamalive-script-cisco-apic-em-tropo-api.html - iAmAlive%20Script%20%28%20APIC-EM%20%26%20Tropo%20API%20%29 "><span class="icon-twitter"> Tweet</span></a>
+
+
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'wwanjira'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://github.com/wilberCisco">
+        <i class="fab fa-github-square fa-sm"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/wilberwanjira/">
+        <i class="fab fa-linkedin fa-sm"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/iam_wilber">
+        <i class="fab fa-twitter-square fa-sm"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fas fa-coffee"></i> Wilber Wanjira
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script async src="//yihui.name/js/center-img.js"></script>
+<script src="/js/jquery-2.2.4.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.configure({languages: []});
+hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+
+    </body>
+</html>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Networks on Network Development Engineer</title>
-    <link>/categories/networks.html</link>
-    <description>Recent content in Networks on Network Development Engineer</description>
+    <title>Python on Network Development Engineer</title>
+    <link>/tags/python.html</link>
+    <description>Recent content in Python on Network Development Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 16 Mar 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/networks/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,15 +20,6 @@
       <description>iAmAlive Script iAmAlive script confirms if a host is reachable and triggers a collaborative action via Tropo; Tropo will send an sms to the network admin if the host is reachable or call the network admin if the host is unreachable.
 The idea is to demonstrate the capabilities of APIC-EM [^1] as well as Tropo APIs and how they can be leveraged on to facilitate collaboration within distributed teams.
  Flow  Prerequisites Python Tropo Account with Outbound SMS and Call capabilities APIC-EM always on logins [^2]- sandboxapic.</description>
-    </item>
-    
-    <item>
-      <title>SIP over MPLS - Service Implementation</title>
-      <link>/post/sip-over-mpls-service-implementation.html</link>
-      <pubDate>Mon, 17 Aug 2015 00:00:00 +0000</pubDate>
-      
-      <guid>/post/sip-over-mpls-service-implementation.html</guid>
-      <description>Wilber O. Wanjira1 and Juma O. Kevin2 Principal Engineer - Integration1 and Senior Engineer - Core Planning (Voice)2  Introduction In this document, we share the deployed network architecture to provide SIP over MPLS. This model adopts the SIP protocol as signaling to set up a call and MPLS as a core network forwarding mechanism. SIP over MPLS will provide an alternative to SIP over dedicated Internet Access (the current and more typical deployment approach).</description>
     </item>
     
   </channel>

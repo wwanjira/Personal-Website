@@ -6,10 +6,21 @@
     <description>Recent content in Networks on Network Development Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 17 Aug 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Mar 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/networks/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>iAmAlive Script ( APIC-EM &amp; Tropo API )</title>
+      <link>/post/iamalive-script-cisco-apic-em-tropo-api.html</link>
+      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/iamalive-script-cisco-apic-em-tropo-api.html</guid>
+      <description>iAmAlive Script iAmAlive script confirms if a host is reachable and triggers a collaborative action via Tropo; Tropo will send an sms to the network admin if the host is reachable or call the network admin if the host is unreachable.
+The idea is to demonstrate the capabilities of APIC-EM [^1] as well as Tropo APIs and how they can be leveraged on to facilitate collaboration within distributed teams.
+ Flow  Prerequisites Python Tropo Account with Outbound SMS and Call capabilities APIC-EM always on logins [^2]- sandboxapic.</description>
+    </item>
     
     <item>
       <title>SIP over MPLS - Service Implementation</title>

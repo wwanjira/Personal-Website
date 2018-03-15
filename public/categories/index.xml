@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Cisco</title>
+      <link>/categories/cisco.html</link>
+      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/cisco.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Documentation</title>
       <link>/categories/documentation.html</link>
       <pubDate>Mon, 17 Aug 2015 00:00:00 +0000</pubDate>
@@ -40,9 +49,27 @@
     <item>
       <title>Networks</title>
       <link>/categories/networks.html</link>
-      <pubDate>Mon, 17 Aug 2015 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>/categories/networks.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>/categories/python.html</link>
+      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/python.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scripts</title>
+      <link>/categories/scripts.html</link>
+      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/scripts.html</guid>
       <description></description>
     </item>
     
