@@ -212,4 +212,4 @@ Stropo outbound call script (.js)
 
 [^1]:delivers software-defined networking (SDN) to the enterprise WAN, campus, and branch networks. [more info](https://www.cisco.com/c/en/us/products/cloud-systems-management/application-policy-infrastructure-controller-enterprise-module/index.html)
 
-[^2]:APIC EM always on sandbox - [link](sandboxapic.cisco.com) | [more info](https://developer.cisco.com/site/networking/)
+[^2]:APIC EM always on sandbox - [link](https://sandboxapic.cisco.com) | [more info](https://developer.cisco.com/site/networking/)
