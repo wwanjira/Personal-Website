@@ -26,7 +26,7 @@ protocol = "https://"
 	enableRSS = true
 	
 	title404 = "This is not the web page you are looking for."
-	subtitle404 = "Oo"
+	subtitle404 = "Oooops!"
 
 	disqusShortname = "wilberwanjira"
 	enableDisqus = true
