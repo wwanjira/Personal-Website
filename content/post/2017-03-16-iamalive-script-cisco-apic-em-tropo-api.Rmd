@@ -10,7 +10,7 @@ categories:
   - python
   - cisco
 tags:
-  - documentation
+  - doc
   - networks
   - scripts
   - python

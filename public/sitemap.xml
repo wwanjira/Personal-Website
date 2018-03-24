@@ -3,157 +3,157 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/iamalive-script-cisco-apic-em-tropo-api.html</loc>
+    <loc>https://www.wilber.co.ke/post/iamalive-script-cisco-apic-em-tropo-api.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/the-internet-of-things-iot.html</loc>
+    <loc>https://www.wilber.co.ke/post/the-internet-of-things-iot.html</loc>
     <lastmod>2016-05-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/sip-over-mpls-service-implementation.html</loc>
+    <loc>https://www.wilber.co.ke/post/sip-over-mpls-service-implementation.html</loc>
     <lastmod>2015-08-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/about.html</loc>
+    <loc>https://www.wilber.co.ke/about.html</loc>
   </url>
   
   <url>
-    <loc>/categories.html</loc>
+    <loc>https://www.wilber.co.ke/categories.html</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/cisco.html</loc>
+    <loc>https://www.wilber.co.ke/tags/cisco.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/cisco.html</loc>
+    <loc>https://www.wilber.co.ke/categories/cisco.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/documentation.html</loc>
+    <loc>https://www.wilber.co.ke/tags/documentation.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/documentation.html</loc>
-    <lastmod>2015-08-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/internet-of-things.html</loc>
-    <lastmod>2016-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/internet-of-things.html</loc>
-    <lastmod>2016-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/iot.html</loc>
-    <lastmod>2016-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/iot.html</loc>
-    <lastmod>2016-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/networks.html</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/networks.html</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post.html</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/python.html</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/python.html</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/safaricom.html</loc>
+    <loc>https://www.wilber.co.ke/categories/documentation.html</loc>
     <lastmod>2015-08-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/scripts.html</loc>
+    <loc>https://www.wilber.co.ke/tags/internet-of-things.html</loc>
+    <lastmod>2016-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/categories/internet-of-things.html</loc>
+    <lastmod>2016-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/tags/iot.html</loc>
+    <lastmod>2016-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/categories/iot.html</loc>
+    <lastmod>2016-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/scripts.html</loc>
+    <loc>https://www.wilber.co.ke/tags/networks.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/service-provider.html</loc>
+    <loc>https://www.wilber.co.ke/categories/networks.html</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/post.html</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/tags/python.html</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/categories/python.html</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/tags/safaricom.html</loc>
     <lastmod>2015-08-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/service-provider.html</loc>
+    <loc>https://www.wilber.co.ke/tags/scripts.html</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/categories/scripts.html</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/tags/service-provider.html</loc>
     <lastmod>2015-08-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags.html</loc>
+    <loc>https://www.wilber.co.ke/categories/service-provider.html</loc>
+    <lastmod>2015-08-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/tags.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/tropo.html</loc>
+    <loc>https://www.wilber.co.ke/tags/tropo.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/writing.html</loc>
+    <loc>https://www.wilber.co.ke/categories/writing.html</loc>
     <lastmod>2016-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

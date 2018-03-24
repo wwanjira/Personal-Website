@@ -7,34 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 16 Mar 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.wilber.co.ke/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>iAmAlive Script ( APIC-EM &amp; Tropo API )</title>
-      <link>/post/iamalive-script-cisco-apic-em-tropo-api.html</link>
+      <link>https://www.wilber.co.ke/post/iamalive-script-cisco-apic-em-tropo-api.html</link>
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/iamalive-script-cisco-apic-em-tropo-api.html</guid>
+      <guid>https://www.wilber.co.ke/post/iamalive-script-cisco-apic-em-tropo-api.html</guid>
       <description>iAmAlive Script iAmAlive script confirms if a host is reachable and triggers a collaborative action via Tropo; Tropo will send an sms to the network admin if the host is reachable or call the network admin if the host is unreachable.
 The idea is to demonstrate the capabilities of APIC-EM 1 as well as Tropo APIs and how they can be leveraged on to facilitate collaboration within distributed teams.
- Flow  Prerequisites  Python Tropo Account with Outbound SMS and Call capabilities Access to an APIC-EM Platform 2   Code  configuration file (iAmAlive_config.</description>
+ Flow   Prerequisites  Python Tropo Account with Outbound SMS and Call capabilities Access to an APIC-EM Platform 2   Code  configuration file (iAmAlive_config.</description>
     </item>
     
     <item>
       <title>The Internet Of Things [ IoT ]</title>
-      <link>/post/the-internet-of-things-iot.html</link>
+      <link>https://www.wilber.co.ke/post/the-internet-of-things-iot.html</link>
       <pubDate>Tue, 10 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>/post/the-internet-of-things-iot.html</guid>
+      <guid>https://www.wilber.co.ke/post/the-internet-of-things-iot.html</guid>
       <description>Internet of Things – a conjunction of three simple words that form an invisible yet supporting realm that coexists in the shadows of our dimension. If you have lived through the 80s and/or the 90s, you might have co-experienced the advent and “rise-to-power” of the internet. You might also be able to recall how you loved (or hated) to establish a dial-up internet connection over your telephone line and would shriek with sheer joy (if you got an acceptable connection rate) or despair (if your connection was as slow as snail mail).</description>
     </item>
     
     <item>
       <title>SIP over MPLS - Service Implementation</title>
-      <link>/post/sip-over-mpls-service-implementation.html</link>
+      <link>https://www.wilber.co.ke/post/sip-over-mpls-service-implementation.html</link>
       <pubDate>Mon, 17 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>/post/sip-over-mpls-service-implementation.html</guid>
+      <guid>https://www.wilber.co.ke/post/sip-over-mpls-service-implementation.html</guid>
       <description>Wilber O. Wanjira1 and Juma O. Kevin2 Principal Engineer - Integration1 and Senior Engineer - Core Planning (Voice)2  Introduction In this document, we share the deployed network architecture to provide SIP over MPLS. This model adopts the SIP protocol as signaling to set up a call and MPLS as a core network forwarding mechanism. SIP over MPLS will provide an alternative to SIP over dedicated Internet Access (the current and more typical deployment approach).</description>
     </item>
     

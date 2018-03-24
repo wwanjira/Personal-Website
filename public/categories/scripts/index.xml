@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scripts on Network Development Engineer</title>
-    <link>/categories/scripts.html</link>
+    <link>https://www.wilber.co.ke/categories/scripts.html</link>
     <description>Recent content in Scripts on Network Development Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 16 Mar 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/scripts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.wilber.co.ke/categories/scripts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>iAmAlive Script ( APIC-EM &amp; Tropo API )</title>
-      <link>/post/iamalive-script-cisco-apic-em-tropo-api.html</link>
+      <link>https://www.wilber.co.ke/post/iamalive-script-cisco-apic-em-tropo-api.html</link>
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/iamalive-script-cisco-apic-em-tropo-api.html</guid>
+      <guid>https://www.wilber.co.ke/post/iamalive-script-cisco-apic-em-tropo-api.html</guid>
       <description>iAmAlive Script iAmAlive script confirms if a host is reachable and triggers a collaborative action via Tropo; Tropo will send an sms to the network admin if the host is reachable or call the network admin if the host is unreachable.
 The idea is to demonstrate the capabilities of APIC-EM 1 as well as Tropo APIs and how they can be leveraged on to facilitate collaboration within distributed teams.
- Flow  Prerequisites  Python Tropo Account with Outbound SMS and Call capabilities Access to an APIC-EM Platform 2   Code  configuration file (iAmAlive_config.</description>
+ Flow   Prerequisites  Python Tropo Account with Outbound SMS and Call capabilities Access to an APIC-EM Platform 2   Code  configuration file (iAmAlive_config.</description>
     </item>
     
   </channel>

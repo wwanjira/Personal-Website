@@ -2,92 +2,92 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Network Development Engineer</title>
-    <link>/categories.html</link>
+    <link>https://www.wilber.co.ke/categories.html</link>
     <description>Recent content in Categories on Network Development Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.wilber.co.ke/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Cisco</title>
-      <link>/categories/cisco.html</link>
+      <link>https://www.wilber.co.ke/categories/cisco.html</link>
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/categories/cisco.html</guid>
+      <guid>https://www.wilber.co.ke/categories/cisco.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Documentation</title>
-      <link>/categories/documentation.html</link>
+      <link>https://www.wilber.co.ke/categories/documentation.html</link>
       <pubDate>Mon, 17 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>/categories/documentation.html</guid>
+      <guid>https://www.wilber.co.ke/categories/documentation.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Internet of Things</title>
-      <link>/categories/internet-of-things.html</link>
+      <link>https://www.wilber.co.ke/categories/internet-of-things.html</link>
       <pubDate>Tue, 10 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>/categories/internet-of-things.html</guid>
+      <guid>https://www.wilber.co.ke/categories/internet-of-things.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Iot</title>
-      <link>/categories/iot.html</link>
+      <link>https://www.wilber.co.ke/categories/iot.html</link>
       <pubDate>Tue, 10 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>/categories/iot.html</guid>
+      <guid>https://www.wilber.co.ke/categories/iot.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Networks</title>
-      <link>/categories/networks.html</link>
+      <link>https://www.wilber.co.ke/categories/networks.html</link>
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/categories/networks.html</guid>
+      <guid>https://www.wilber.co.ke/categories/networks.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>/categories/python.html</link>
+      <link>https://www.wilber.co.ke/categories/python.html</link>
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/categories/python.html</guid>
+      <guid>https://www.wilber.co.ke/categories/python.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scripts</title>
-      <link>/categories/scripts.html</link>
+      <link>https://www.wilber.co.ke/categories/scripts.html</link>
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/categories/scripts.html</guid>
+      <guid>https://www.wilber.co.ke/categories/scripts.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Service Provider</title>
-      <link>/categories/service-provider.html</link>
+      <link>https://www.wilber.co.ke/categories/service-provider.html</link>
       <pubDate>Mon, 17 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>/categories/service-provider.html</guid>
+      <guid>https://www.wilber.co.ke/categories/service-provider.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Writing</title>
-      <link>/categories/writing.html</link>
+      <link>https://www.wilber.co.ke/categories/writing.html</link>
       <pubDate>Tue, 10 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>/categories/writing.html</guid>
+      <guid>https://www.wilber.co.ke/categories/writing.html</guid>
       <description></description>
     </item>
     

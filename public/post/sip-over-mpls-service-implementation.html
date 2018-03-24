@@ -8,32 +8,32 @@
 		<meta name="description" content="Networks, Scripts, Musings,">
 		<meta name="generator" content="Hugo 0.37.1" />
 		<title>SIP over MPLS - Service Implementation &middot; Network Development Engineer</title>
-		<link rel="shortcut icon" href="/images/favicon.ico">
-		<link rel="stylesheet" href="/css/style.css">
-		<link rel="stylesheet" href="/css/highlight.css">
+		<link rel="shortcut icon" href="https://www.wilber.co.ke/images/favicon.ico">
+		<link rel="stylesheet" href="https://www.wilber.co.ke/css/style.css">
+		<link rel="stylesheet" href="https://www.wilber.co.ke/css/highlight.css">
 		
 		
 		<link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
 		
 
 		
-		<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Network Development Engineer" />
+		<link href="https://www.wilber.co.ke/index.xml" rel="alternate" type="application/rss+xml" title="Network Development Engineer" />
 		
 	</head>
     <body>
        <nav class="main-nav">
 	
 	
-		<a href='/'> <span class="arrow">←</span>Home</a>
+		<a href='https://www.wilber.co.ke/'> <span class="arrow">←</span>Home</a>
 	
-	<a href='/projects'>Projects</a>
-	<a href='/tags'>Tags</a>
-	<a href='/about'>About</a>
+	<a href='https://www.wilber.co.ke/projects'>Projects</a>
+	<a href='https://www.wilber.co.ke/tags'>Tags</a>
+	<a href='https://www.wilber.co.ke/about'>About</a>
 
 	
 
 	
-	<a class="cta" href="/index.xml">Subscribe</a>
+	<a class="cta" href="https://www.wilber.co.ke/index.xml">Subscribe</a>
 	
 </nav>
 
@@ -52,13 +52,13 @@
                       
                       
                           
-                              <a href="/tags/documentation">documentation</a>
+                              <a href="https://www.wilber.co.ke/tags/documentation">documentation</a>
                           
-                              <a href="/tags/networks">networks</a>
+                              <a href="https://www.wilber.co.ke/tags/networks">networks</a>
                           
-                              <a href="/tags/service-provider">service provider</a>
+                              <a href="https://www.wilber.co.ke/tags/service-provider">service provider</a>
                           
-                              <a href="/tags/safaricom">safaricom</a>
+                              <a href="https://www.wilber.co.ke/tags/safaricom">safaricom</a>
                           
                       
                       
@@ -68,8 +68,7 @@
                 
                 <section id="post-body">
                     <center>
-<a href="https://www.wilber.co.ke/about">Wilber O. Wanjira<sup>1</sup></a> and <a href="https://www.linkedin.com/in/juma-kevin-85a51932/">Juma O. Kevin<sup>2</sup></a> <br />
-Principal Engineer - Integration<sup>1</sup> and Senior Engineer - Core Planning (Voice)<sup>2</sup>
+<a href="https://www.wilber.co.ke/about">Wilber O. Wanjira<sup>1</sup></a> and <a href="https://www.linkedin.com/in/juma-kevin-85a51932/">Juma O. Kevin<sup>2</sup></a> <br /> Principal Engineer - Integration<sup>1</sup> and Senior Engineer - Core Planning (Voice)<sup>2</sup>
 </center>
 <div id="introduction" class="section level3">
 <h3>Introduction</h3>
@@ -86,8 +85,7 @@ Principal Engineer - Integration<sup>1</sup> and Senior Engineer - Core Planning
 <li>End-to-End Quality of Service; MPLS will transport SIP using labels that will define the destination <a href="https://en.wikipedia.org/wiki/Session_border_controller">(Session Border Controller (SBC))</a> and the class of service it should receive. (explicit null)</li>
 <li>Avoiding usage of public IPs which are limited resources</li>
 <li>Ease of implementation as complex router configurations (over public deployments) are not required.</li>
-<li>DRVS: Disaster Recovery Voice Signaling - Have the larger customer connected to both SBCs for redundancy.
-.</li>
+<li>DRVS: Disaster Recovery Voice Signaling - Have the larger customer connected to both SBCs for redundancy. .</li>
 </ul>
 </div>
 <div id="core-configuration-layout" class="section level3">
@@ -95,11 +93,17 @@ Principal Engineer - Integration<sup>1</sup> and Senior Engineer - Core Planning
 <blockquote>
 <p><strong>Deployed e2e SIP Service delivery over MPLS [Schematic]</strong></p>
 </blockquote>
-<p><img src="/img/e2e.png" /></p>
+<div class="figure">
+<img src="https://www.wilber.co.ke/img/e2e.png" />
+
+</div>
 <blockquote>
 <p><strong>Connectivity between the SBC and Enterprise Core [Schematic &amp; Configurations]</strong></p>
 </blockquote>
-<p><img src="/img/sbc_en_con.png" style="width:90.0%" /></p>
+<div class="figure">
+<img src="https://www.wilber.co.ke/img/sbc_en_con.png" style="width:90.0%" />
+
+</div>
 <p><strong>Physical &amp; Logical Layout</strong></p>
 <table>
 <thead>
@@ -253,7 +257,10 @@ router static
 <p><strong>Customer VRF Configurations</strong></p>
 </blockquote>
 <p><strong>Schematic</strong></p>
-<p><img src="/img/cust_vrf.png" style="width:70.0%" /></p>
+<div class="figure">
+<img src="https://www.wilber.co.ke/img/cust_vrf.png" style="width:70.0%" />
+
+</div>
 <table>
 <thead>
 <tr class="header">
@@ -323,7 +330,7 @@ end-set
 </blockquote>
 <p><strong>Deployment Model #1</strong> - Link terminates on a Router. Customer PBX has WAN Port</p>
 <center>
-<img src="/img/cust_ce_opt1.png" alt="." style="width:70.0%" />
+<img src="https://www.wilber.co.ke/img/cust_ce_opt1.png" alt="." style="width:70.0%" />
 </center>
 <table>
 <thead>
@@ -361,12 +368,10 @@ router eigrp SIPoMPLS
   network 10.221.0.0 0.0.0.3
   network 172.30.1.0 0.0.0.3
 !</code></pre>
-<p><em>PBX will terminate on interface F0/2; directly or through a LAN switch.
-PBX port will be configured on the block range: on this example, the pbx IP will be 10.100.0.2/30 with a default gateway of 10.100.0.1
-The block should be able to ping the SBC private MPLS IPs (Signaling and Media)</em></p>
+<p><em>PBX will terminate on interface F0/2; directly or through a LAN switch. PBX port will be configured on the block range: on this example, the pbx IP will be 10.100.0.2/30 with a default gateway of 10.100.0.1 The block should be able to ping the SBC private MPLS IPs (Signaling and Media)</em></p>
 <p><strong>Deployment Model #2</strong> - NAT</p>
 <center>
-<img src="/img/cust_ce_opt2.png" alt="." style="width:70.0%" />
+<img src="https://www.wilber.co.ke/img/cust_ce_opt2.png" alt="." style="width:70.0%" />
 </center>
 <table>
 <thead>
@@ -419,7 +424,7 @@ ip nat inside destination list 114 pool voip-rtp</code></pre>
 <p><em>Signaling port 5060 | Media Port Range 10000 - 20000</em></p>
 <p><strong>Deployment Model #3</strong> - Link terminates directly to PBX</p>
 <center>
-<img src="/img/cust_ce_opt3.png" alt="." style="width:70.0%" />
+<img src="https://www.wilber.co.ke/img/cust_ce_opt3.png" alt="." style="width:70.0%" />
 </center>
 <table>
 <thead>
@@ -453,7 +458,7 @@ ip nat inside destination list 114 pool voip-rtp</code></pre>
             </article>
             <footer id="post-meta" class="clearfix">
                 <a href="https://github.com/wilberCisco">
-                        <img class="avatar" src="/images/avatar.png">
+                        <img class="avatar" src="https://www.wilber.co.ke/images/avatar.png">
                         <div>
                             <span class="dark">Wilber Wanjira</span>
                             <span>Network Development Engineer</span>
@@ -461,7 +466,7 @@ ip nat inside destination list 114 pool voip-rtp</code></pre>
                     </a>
                 <section id="sharing">
                     
-<a class="twitter" href="https://twitter.com/intent/tweet?text=%2fpost%2fsip-over-mpls-service-implementation.html - SIP%20over%20MPLS%20-%20Service%20Implementation "><span class="icon-twitter"> Tweet</span></a>
+<a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fwww.wilber.co.ke%2fpost%2fsip-over-mpls-service-implementation.html - SIP%20over%20MPLS%20-%20Service%20Implementation "><span class="icon-twitter"> Tweet</span></a>
 
 
 
@@ -527,9 +532,9 @@ ip nat inside destination list 114 pool voip-rtp</code></pre>
 
         <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script async src="//yihui.name/js/center-img.js"></script>
-<script src="/js/jquery-2.2.4.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/highlight.pack.js"></script>
+<script src="https://www.wilber.co.ke/js/jquery-2.2.4.min.js"></script>
+<script src="https://www.wilber.co.ke/js/main.js"></script>
+<script src="https://www.wilber.co.ke/js/highlight.pack.js"></script>
 <script>hljs.configure({languages: []});
 hljs.initHighlightingOnLoad();</script>
 

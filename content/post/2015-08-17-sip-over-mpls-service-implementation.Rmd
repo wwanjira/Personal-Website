@@ -5,7 +5,7 @@ date: '2015-08-17'
 description: SIPoMPLS - Replacing SIP over Internet (the current and more typical deployment approach)
 slug: sip-over-mpls-service-implementation
 tags:
-- documentation
+- doc
 - networks
 - service provider
 - safaricom
