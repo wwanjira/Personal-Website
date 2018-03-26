@@ -5,7 +5,7 @@ canonifyurls = true
 languageCode = "en"
 title = "Network Development Engineer"
 theme = "hugo-theme-cactus-plus"
-googleAnalytics = ""
+googleAnalytics = "UA-116430629-1"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 #paginate = 3
 
