@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Network Development Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 16 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.wilber.co.ke/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Books</title>
+      <link>https://www.wilber.co.ke/tags/books.html</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wilber.co.ke/tags/books.html</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Cisco</title>
@@ -66,24 +75,6 @@
     </item>
     
     <item>
-      <title>Network</title>
-      <link>https://www.wilber.co.ke/tags/network.html</link>
-      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wilber.co.ke/tags/network.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Network Development Engineer</title>
-      <link>https://www.wilber.co.ke/tags/network-development-engineer.html</link>
-      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wilber.co.ke/tags/network-development-engineer.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Networks</title>
       <link>https://www.wilber.co.ke/tags/networks.html</link>
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
@@ -134,15 +125,6 @@
       <pubDate>Mon, 17 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://www.wilber.co.ke/tags/service-provider.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Software</title>
-      <link>https://www.wilber.co.ke/tags/software.html</link>
-      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wilber.co.ke/tags/software.html</guid>
       <description></description>
     </item>
     
