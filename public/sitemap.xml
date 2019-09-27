@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.wilber.co.ke/post/engineering-reads.html</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.wilber.co.ke/post/iamalive-script-cisco-apic-em-tropo-api.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
   </url>
@@ -22,7 +27,14 @@
   </url>
   
   <url>
+    <loc>https://www.wilber.co.ke/categories/books.html</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.wilber.co.ke/categories.html</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -51,6 +63,30 @@
   </url>
   
   <url>
+    <loc>https://www.wilber.co.ke/tags/engineer.html</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/categories/engineer.html</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/tags/engineering.html</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/categories/engineering.html</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.wilber.co.ke/tags/internet-of-things.html</loc>
     <lastmod>2016-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -75,8 +111,26 @@
   </url>
   
   <url>
+    <loc>https://www.wilber.co.ke/tags/network.html</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.wilber.co.ke/</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/tags/network-development-engineer.html</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/tags/network-engineer.html</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -88,13 +142,13 @@
   
   <url>
     <loc>https://www.wilber.co.ke/categories/networks.html</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.wilber.co.ke/post.html</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -107,6 +161,12 @@
   <url>
     <loc>https://www.wilber.co.ke/categories/python.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/tags/reads.html</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -6,9 +6,19 @@
     <description>Recent content in Categories on Network Development Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Fri, 27 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.wilber.co.ke/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Books</title>
+      <link>https://www.wilber.co.ke/categories/books.html</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wilber.co.ke/categories/books.html</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Cisco</title>
@@ -25,6 +35,24 @@
       <pubDate>Mon, 17 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://www.wilber.co.ke/categories/doc.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Engineer</title>
+      <link>https://www.wilber.co.ke/categories/engineer.html</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wilber.co.ke/categories/engineer.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Engineering</title>
+      <link>https://www.wilber.co.ke/categories/engineering.html</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wilber.co.ke/categories/engineering.html</guid>
       <description></description>
     </item>
     
@@ -49,7 +77,7 @@
     <item>
       <title>Networks</title>
       <link>https://www.wilber.co.ke/categories/networks.html</link>
-      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.wilber.co.ke/categories/networks.html</guid>
       <description></description>

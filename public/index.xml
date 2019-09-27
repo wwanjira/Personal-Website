@@ -6,8 +6,18 @@
     <description>Recent content on Network Development Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 16 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Sep 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.wilber.co.ke/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Engineering Reads</title>
+      <link>https://www.wilber.co.ke/post/engineering-reads.html</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wilber.co.ke/post/engineering-reads.html</guid>
+      <description>A list of good reads I believe every engineer should read through in striving to be a better engineer. Will likely organize these better down the line.
+Courtesy of @impatrickt - Unsplash.com: Books Apollo How to do a bunch of “ambitious” things with lots of talented folks and quickly at that! Here’s a fantastic video presentation on the Apollo Guidance Computer(AGC). Some fun facts: - AGC didn’t have room for code to enforce invariants - AGC first human interactive interface - AGC first priority scheduler &amp;gt; My favourite titbits: Engineers reported to engineers, metrics deck/project deck used to coordinate decentralized organization.</description>
+    </item>
     
     <item>
       <title>iAmAlive Script ( APIC-EM &amp; Tropo API )</title>
