@@ -8,12 +8,11 @@ description: A list of good reads I believe every engineer should read through i
 tags:
 - reads
 - network
+- software
 - engineer
-- network engineer
 - engineering
 - network development engineer
 categories:
-- networks
 - engineer
 - engineering
 - books

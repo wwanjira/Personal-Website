@@ -129,12 +129,6 @@
   </url>
   
   <url>
-    <loc>https://www.wilber.co.ke/tags/network-engineer.html</loc>
-    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.wilber.co.ke/tags/networks.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -142,7 +136,7 @@
   
   <url>
     <loc>https://www.wilber.co.ke/categories/networks.html</loc>
-    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -197,6 +191,12 @@
   <url>
     <loc>https://www.wilber.co.ke/categories/service-provider.html</loc>
     <lastmod>2015-08-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/tags/software.html</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
