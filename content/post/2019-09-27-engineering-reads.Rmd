@@ -22,24 +22,27 @@ categories:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-A list of good reads I believe every engineer should read through in
-striving to be a better engineer. Will likely organize these better down
+A list of good reads I believe every Engineer should read through in
+striving to be a better Engineer. Will likely organize these better down
 the line.
 
-Courtesy of @impatrickt -  Unsplash.com: 
+
 ![](/img/fika_cafe_toronto.jpeg)
+*Image courtesy of [Patrick Tomasso](https://unsplash.com/@impatrickt)*
 
 # Books
-### [Apollo](http://www.amazon.com/Apollo-Charles-Murray/dp/0976000806/ref=sr_1_2?ie=UTF8&qid=1435698385&sr=8-2&keywords=apollo)
+#### [Apollo](http://www.amazon.com/Apollo-Charles-Murray/dp/0976000806/ref=sr_1_2?ie=UTF8&qid=1435698385&sr=8-2&keywords=apollo)
 How to do a bunch of "ambitious" things with lots of talented folks and
 quickly at that\!
 Here's a [fantastic video](https://www.youtube.com/watch?v=xY45YE7ggng) presentation on the Apollo Guidance Computer(AGC). Some fun facts:
+
   - AGC didn't have room for code to enforce invariants
   - AGC first human interactive interface
   - AGC first priority scheduler
+  
 > My favourite titbits: Engineers reported to engineers, metrics deck/project deck used to coordinate decentralized organization.
 
-### [Failure is not an Option](http://www.amazon.com/Failure-Not-Option-Mission-Control/dp/1439148813/)
+##### [Failure is not an Option](http://www.amazon.com/Failure-Not-Option-Mission-Control/dp/1439148813/)
 
 How to hold all of those talented folks accountable while keeping an
 especially daring few of them "safe."
@@ -65,7 +68,7 @@ especially daring few of them "safe."
     batteries to run down and vent off the LOX when the failsafe vents
     opened as a result).
 
-### [Complications](http://www.amazon.com/Complications-Surgeons-Notes-Imperfect-Science/dp/0312421702)
+#### [Complications](http://www.amazon.com/Complications-Surgeons-Notes-Imperfect-Science/dp/0312421702)
 
 Why/How to guard against very talented people being temporarily or
 occasionally less-than-talented.
@@ -81,7 +84,7 @@ However, it has been pointed out to me that the Mission Controllers were
 not chosen and then made conscientious; rather they were conscientious
 first and made Mission Controllers later.
 
-### [Fooled by Randomness,](http://www.amazon.com/Fooled-Randomness-Hidden-Markets-Incerto/dp/0812975219/) [Anti-Fragile](http://www.amazon.com/Antifragile-Things-That-Disorder-Incerto/dp/0812979680/)
+#### [Fooled by Randomness,](http://www.amazon.com/Fooled-Randomness-Hidden-Markets-Incerto/dp/0812975219/) [Anti-Fragile](http://www.amazon.com/Antifragile-Things-That-Disorder-Incerto/dp/0812979680/)
 
 Stop falling into the traps of humans attempting analytical thought.
 
@@ -98,7 +101,7 @@ Start identifying risks and inure yourself/system to them.
     anticipated by any models ("law" of unintended consequences);
     changing behaviour in such a system needs to be heavily monitored.
 
-###  [Mythical Man Month](http://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959/)
+####  [Mythical Man Month](http://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959/)
 
 Stop falling into the ubiquitous mental traps of humans attempting software development.
 * More people almost always make a project take longer.
@@ -113,13 +116,13 @@ cannot include the costs you have paid in the past.
 
 # Non-Books
 
-### [NASA Systems Engineering Handbook](https://www.nasa.gov/sites/default/files/atoms/files/nasa_systems_engineering_handbook_0.pdf)
+#### [NASA Systems Engineering Handbook](https://www.nasa.gov/sites/default/files/atoms/files/nasa_systems_engineering_handbook_0.pdf)
 
 * Handbook that digs into every aspect of engineering a system from
     idea conception, requirements gathering, design, evaluating choices
     to readiness and release
 
-### [The Architecture of Open Source Applications](http://aosabook.org/en/index.html)
+#### [The Architecture of Open Source Applications](http://aosabook.org/en/index.html)
 
 * Architects look at thousands of buildings during their training,
     and study critiques of those buildings written by masters. In
@@ -129,61 +132,61 @@ cannot include the costs you have paid in the past.
     one another's mistakes rather than building on one another's
     successes**
     
-### [What Have You Tried?](http://mattgemmell.com/what-have-you-tried/)
+#### [What Have You Tried?](http://mattgemmell.com/what-have-you-tried/)
 
-### [Asking for help](https://spin.atomicobject.com/2017/07/05/asking-for-help/)
+#### [Asking for help](https://spin.atomicobject.com/2017/07/05/asking-for-help/)
 
-### [Transaction Logs 101](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying)
+#### [Transaction Logs 101](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying)
 
-### [Defining a (Distinguished, Principal, Senior) Engineer](https://blog.jessfraz.com/post/defining-a-distinguished-engineer/)
+#### [Defining a (Distinguished, Principal, Senior) Engineer](https://blog.jessfraz.com/post/defining-a-distinguished-engineer/)
 
-### [Technical debt is like Tetris](https://medium.com/@erichiggins/technical-debt-is-like-tetris-168f64d8b700)
+#### [Technical debt is like Tetris](https://medium.com/@erichiggins/technical-debt-is-like-tetris-168f64d8b700)
 
 * Technical debt will always exist
 * Write code until you reach zero tech debt but you may never have customers, write code that delights customers - but may have horrendous tech debt
 * You will never win at software
 * The best you can do is identify, track and pay off technical debt on a continuous busy so you don’t lose the game
 
-### [System design primer](https://github.com/donnemartin/system-design-primer/)
+#### [System design primer](https://github.com/donnemartin/system-design-primer/)
 * Ever wanted a crash course on system design concepts? Well look no
     further\!
 
-### [You don’t need stand-ups\!](https://medium.com/@jsonpify/you-dont-need-standup-9a74782517c1) and [reducing inefficiencies in your stand-ups](https://medium.com/@MagnusDahlgren/is-your-daily-stand-up-a-daily-waste-of-time-119cde2b522e)
+#### [You don’t need stand-ups\!](https://medium.com/@jsonpify/you-dont-need-standup-9a74782517c1) and [reducing inefficiencies in your stand-ups](https://medium.com/@MagnusDahlgren/is-your-daily-stand-up-a-daily-waste-of-time-119cde2b522e)
 
-### [Refactoring by Martin Fowler](https://martinfowler.com/books/refactoring.html)
+#### [Refactoring by Martin Fowler](https://martinfowler.com/books/refactoring.html)
 * Can you write good code until you've learnt how to be good at
     refactoring existing code?
 
-### [6 million TPS in a single thread](https://martinfowler.com/articles/lmax.html)
+#### [6 million TPS in a single thread](https://martinfowler.com/articles/lmax.html)
 
-### [Isolating dependencies w/ bulkhead pattern](https://github.com/Netflix/Hystrix/wiki/How-it-Works#Isolation)
+#### [Isolating dependencies w/ bulkhead pattern](https://github.com/Netflix/Hystrix/wiki/How-it-Works#Isolation)
 
-### [Turning the database inside out](https://www.confluent.io/blog/turning-the-database-inside-out-with-apache-samza/)
+#### [Turning the database inside out](https://www.confluent.io/blog/turning-the-database-inside-out-with-apache-samza/)
 
-### [Ubers NoSQL -\> MySQL migration](https://eng.uber.com/mysql-migration/)
+#### [Ubers NoSQL -\> MySQL migration](https://eng.uber.com/mysql-migration/)
 
-### [Queue management](https://blog.acolyer.org/2015/11/19/fail-at-scale-controlling-queue-delay/)
+#### [Queue management](https://blog.acolyer.org/2015/11/19/fail-at-scale-controlling-queue-delay/)
 
-### [Uber Peloton](https://eng.uber.com/peloton/) - resource scheduler for different workloads
+#### [Uber Peloton](https://eng.uber.com/peloton/) - resource scheduler for different workloads
 
-### [No hello\!](http://www.nohello.com/)
+#### [No hello\!](http://www.nohello.com/)
 *  Please Don't Say Just Hello in Chat - It's as if you called someone
     on the phone and said "Hi\!" and then put them on hold\!
 
-### [Amusing Programming Jargon](https://blog.codinghorror.com/new-programming-jargon/)
+#### [Amusing Programming Jargon](https://blog.codinghorror.com/new-programming-jargon/)
 
-### [Operational resilience: concepts, design and analysis](http://www.nature.com/articles/srep19540)
+#### [Operational resilience: concepts, design and analysis](http://www.nature.com/articles/srep19540)
 * [Operational Assessment](https://w.amazon.com/index.php/User:Darinm/OperationalAssessments)
 
-### [Engineering blogs](https://github.com/kilimchoi/engineering-blogs) - a comprehensive collection of (software) engineering blogs
+#### [Engineering blogs](https://github.com/kilimchoi/engineering-blogs) - a comprehensive collection of (software) engineering blogs
 
-### [Creating pragmatic APIs](https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
+#### [Creating pragmatic APIs](https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
 
-### [23 classic recurring design patterns](https://en.wikipedia.org/wiki/Design_Patterns)
+#### [23 classic recurring design patterns](https://en.wikipedia.org/wiki/Design_Patterns)
 
-### [Code is for today, but Data is forever](https://w.amazon.com/index.php/Ion/Patterns/Data_is_Forever)
+#### [Code is for today, but Data is forever](https://w.amazon.com/index.php/Ion/Patterns/Data_is_Forever)
 
-### Decision analysis
+#### Decision analysis
 *  [NASA systems engineering handbook - technical requirements
     definition](https://www.nasa.gov/sites/default/files/atoms/files/nasa_systems_engineering_handbook_0.pdf)
     - Section 6.8 on Decision Analysis is a good read on **when** and
@@ -192,5 +195,5 @@ cannot include the costs you have paid in the past.
 
 # Non-tech
 
-### [Simply the best](http://www.nytimes.com/2006/08/20/sports/playmagazine/20federer.html)
+#### [Simply the best](http://www.nytimes.com/2006/08/20/sports/playmagazine/20federer.html)
 * an entertaining read on the Greatness of Roger Federer, who I consider one of the best athletes (and certainly the best tennis player) of all time
