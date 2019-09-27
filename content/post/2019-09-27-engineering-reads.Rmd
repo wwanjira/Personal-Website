@@ -2,9 +2,9 @@
 title: "Engineering Reads"
 author: "Wilber Wanjira"
 date: '2019-09-27'
+slug: engineering-reads
 description: A list of good reads I believe every engineer should read through in
   striving to be a better engineer.
-slug: engineering-reads
 tags:
 - reads
 - network
