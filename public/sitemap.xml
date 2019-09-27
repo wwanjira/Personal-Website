@@ -27,19 +27,13 @@
   </url>
   
   <url>
-    <loc>https://www.wilber.co.ke/tags/cisco.html</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.wilber.co.ke/categories/cisco.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.wilber.co.ke/tags/doc.html</loc>
+    <loc>https://www.wilber.co.ke/tags/cisco.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -51,8 +45,8 @@
   </url>
   
   <url>
-    <loc>https://www.wilber.co.ke/tags/internet-of-things.html</loc>
-    <lastmod>2016-05-10T00:00:00+00:00</lastmod>
+    <loc>https://www.wilber.co.ke/tags/doc.html</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -63,7 +57,7 @@
   </url>
   
   <url>
-    <loc>https://www.wilber.co.ke/tags/iot.html</loc>
+    <loc>https://www.wilber.co.ke/tags/internet-of-things.html</loc>
     <lastmod>2016-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -75,13 +69,13 @@
   </url>
   
   <url>
-    <loc>https://www.wilber.co.ke/</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <loc>https://www.wilber.co.ke/tags/iot.html</loc>
+    <lastmod>2016-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.wilber.co.ke/tags/networks.html</loc>
+    <loc>https://www.wilber.co.ke/</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -93,13 +87,13 @@
   </url>
   
   <url>
-    <loc>https://www.wilber.co.ke/post.html</loc>
+    <loc>https://www.wilber.co.ke/tags/networks.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.wilber.co.ke/tags/python.html</loc>
+    <loc>https://www.wilber.co.ke/post.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -111,14 +105,14 @@
   </url>
   
   <url>
-    <loc>https://www.wilber.co.ke/tags/safaricom.html</loc>
-    <lastmod>2015-08-17T00:00:00+00:00</lastmod>
+    <loc>https://www.wilber.co.ke/tags/python.html</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.wilber.co.ke/tags/scripts.html</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <loc>https://www.wilber.co.ke/tags/safaricom.html</loc>
+    <lastmod>2015-08-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -129,13 +123,19 @@
   </url>
   
   <url>
-    <loc>https://www.wilber.co.ke/tags/service-provider.html</loc>
-    <lastmod>2015-08-17T00:00:00+00:00</lastmod>
+    <loc>https://www.wilber.co.ke/tags/scripts.html</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.wilber.co.ke/categories/service-provider.html</loc>
+    <lastmod>2015-08-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/tags/service-provider.html</loc>
     <lastmod>2015-08-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
