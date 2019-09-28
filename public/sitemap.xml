@@ -117,12 +117,6 @@
   </url>
   
   <url>
-    <loc>https://www.wilber.co.ke/</loc>
-    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.wilber.co.ke/tags/networks.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -131,6 +125,12 @@
   <url>
     <loc>https://www.wilber.co.ke/categories/networks.html</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wilber.co.ke/</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

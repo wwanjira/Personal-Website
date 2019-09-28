@@ -3,7 +3,7 @@ baseurl = "https://www.wilber.co.ke/"
 
 canonifyurls = true
 languageCode = "en"
-title = "Network Development Engineer"
+title = "Networks, Scripts, Musings"
 theme = "hugo-theme-cactus-plus"
 googleAnalytics = "UA-116430629-1"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
@@ -22,11 +22,11 @@ protocol = "https://"
 	description = "Networks, Scripts, Musings,"
 	bio = "[Networks](https://www.wilber.co.ke/categories/networks) | [Scripts](https://www.wilber.co.ke/categories/scripts) | [Writing](https://www.wilber.co.ke/categories/writing)"
 
-	github = "wilberCisco"
+	github = "wwanira"
 	enableRSS = true
 	
 	title404 = "This is not the web page you are looking for."
-	subtitle404 = "Oooops!"
+	subtitle404 = "Fucking Hell!"
 
 	disqusShortname = "wilberwanjira"
 	enableDisqus = true
@@ -46,6 +46,6 @@ protocol = "https://"
 
 [social]
 
-  github-square = "https://github.com/wilberCisco"
+  github-square = "https://github.com/wwanjira"
   linkedin = "https://www.linkedin.com/in/wilberwanjira/"
   twitter-square = "https://www.twitter.com/iam_wilber"
