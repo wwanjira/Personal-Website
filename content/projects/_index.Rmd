@@ -1,0 +1,27 @@
+---
+title: "Projects"
+author: "Wilber Wanjira"
+date: "9/29/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+### Oneoak
+
+Focus on solving core human problems. We support companies and founders with an ambitious vision to disrupt industries and improve people&#39;s lives through technology. We are looking for new opportunities in the healthcare and technology sector
+
+Link (broken)：[invest.oneoak](https://invest.oneoak.co.ke)
+
+---
+
+### Wavelogic
+
+Technology Services Contractor
+
+Link：
+
+---
