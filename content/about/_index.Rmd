@@ -3,6 +3,11 @@ title: "About"
 output:
   html_document: default
 ---
+<p style="text-align:center;">I don’t do prose well. My brain just doesn’t work that way. I reason things out by building prototypes.</p>
+
+<p style="text-align:center;">Contact me through email at [hello@wilber.co.ke](mailto:hello@wilber.co.ke)</p>
+
+---
 
 <p style="text-align:center;">
 <img src="img/ccie_routeswitch_med.gif" alt="CCIE #50688" style="max-height: 100px; max-width: 100px;" />
@@ -11,26 +16,11 @@ output:
 </p>
 
 ---
+
 <p style="text-align:center;">
-Thanks for taking an interest in my work history! <br>
+You can download my latest resume <a href="/WilberforceOchiengWanjira_CV.pdf">here</a>
 
-You can download my latest resume <a href="/WilberforceOchiengWanjira_CV.pdf">here</a>.<br>
-
-For my complete & unabridged experience, please visit my [LinkedIn](https://www.linkedin.com/in/wilberwanjira/)
+For my complete and unabridged experience, please visit my [LinkedIn](https://www.linkedin.com/in/wilberwanjira/)
 </p>
 
 ---
-
-<p>Click the link for my <a href="/WilberforceOchiengWanjira_CV.pdf">Resume</a>.</p>
-
-<p class="working">Currently working @ <a class="company" href="https://aws.amazon.com/" target="_blank"><img src="/img/amazon.png" alt="Amazon Web Services" style="width:50px;height:25px;"></a><br></p>
-
-<p>Previously @ <a class="company" href="https://cisco.com" target="_blank"><img src="/img/cisco.png" alt="Cisco Systems" style="width:40px;height:20px;"></a> | 
-<a class="company" href="https://www.safaricom.co.ke/" target="_blank"><img src="/img/safaricom.png" alt="Safaricom" style="width:50px;height:25px;"></a>
-</p>
-
-<p class="large-description">I don’t do prose well. My brain just doesn’t work that way. I reason things out by building prototypes.</p>
-
----
-
-
