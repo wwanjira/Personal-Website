@@ -1,0 +1,11 @@
+---
+title: "Resume"
+author: "Wilber Wanjira"
+date: "9/29/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<iframe style="width: 60vw; height: 100vh" src="https://docs.google.com/document/d/e/2PACX-1vR5NJUXldyiJBCoQe20Sawcz0FdBldA1OlGzrhqTjXNbF9EbxQBP0rSmJ4wwwRrrsvlx2pJcxY8_lGG/pub?embedded=true"></iframe>

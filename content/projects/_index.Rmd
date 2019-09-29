@@ -10,17 +10,30 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-### Oneoak
+### **Oneoak**
 
 Focus on solving core human problems. We support companies and founders with an ambitious vision to disrupt industries and improve people&#39;s lives through technology. We are looking for new opportunities in the healthcare and technology sector
 
-Link (broken)：[invest.oneoak](https://invest.oneoak.co.ke)
+Link (broken)：~~[invest.oneoak](https://invest.oneoak.co.ke)~~
 
 ---
 
-### Wavelogic
+### **PharmOnMobile**
 
-Technology Services Contractor
+Link (broken)：~~[pom](https://pom.co.ke)~~
+
+---
+
+### **Assembli**
+
+Link (broken)：~~[assembli.africa](https://assembli.africa)~~
+
+---
+
+### ~~**Wavelogic**~~
+
+Wavelogic is a technology consulting company that helps Kenyan business owners stay on the cusp of modern day technology.
+
 
 Link：
 
