@@ -68,7 +68,8 @@
                 
                 <section id="post-body">
                     <center>
-<a href="https://www.wilber.co.ke/about">Wilber O. Wanjira<sup>1</sup></a> and <a href="https://www.linkedin.com/in/juma-kevin-85a51932/">Juma O. Kevin<sup>2</sup></a> <br /> Principal Engineer - Integration<sup>1</sup> and Senior Engineer - Core Planning (Voice)<sup>2</sup>
+<a href="https://www.wilber.co.ke/about">Wilber O. Wanjira<sup>1</sup></a> and <a href="https://www.linkedin.com/in/juma-kevin-85a51932/">Juma O. Kevin<sup>2</sup></a> <br />
+Principal Engineer - Integration<sup>1</sup> and Senior Engineer - Core Planning (Voice)<sup>2</sup>
 </center>
 <div id="introduction" class="section level3">
 <h3>Introduction</h3>
@@ -85,7 +86,8 @@
 <li>End-to-End Quality of Service; MPLS will transport SIP using labels that will define the destination <a href="https://en.wikipedia.org/wiki/Session_border_controller">(Session Border Controller (SBC))</a> and the class of service it should receive. (explicit null)</li>
 <li>Avoiding usage of public IPs which are limited resources</li>
 <li>Ease of implementation as complex router configurations (over public deployments) are not required.</li>
-<li>DRVS: Disaster Recovery Voice Signaling - Have the larger customer connected to both SBCs for redundancy. .</li>
+<li>DRVS: Disaster Recovery Voice Signaling - Have the larger customer connected to both SBCs for redundancy.
+.</li>
 </ul>
 </div>
 <div id="core-configuration-layout" class="section level3">
@@ -93,17 +95,11 @@
 <blockquote>
 <p><strong>Deployed e2e SIP Service delivery over MPLS [Schematic]</strong></p>
 </blockquote>
-<div class="figure">
-<img src="https://www.wilber.co.ke/img/e2e.png" />
-
-</div>
+<p><img src="https://www.wilber.co.ke/img/e2e.png" /></p>
 <blockquote>
 <p><strong>Connectivity between the SBC and Enterprise Core [Schematic &amp; Configurations]</strong></p>
 </blockquote>
-<div class="figure">
-<img src="https://www.wilber.co.ke/img/sbc_en_con.png" style="width:90.0%" />
-
-</div>
+<p><img src="https://www.wilber.co.ke/img/sbc_en_con.png" style="width:90.0%" /></p>
 <p><strong>Physical &amp; Logical Layout</strong></p>
 <table>
 <thead>
@@ -257,10 +253,7 @@ router static
 <p><strong>Customer VRF Configurations</strong></p>
 </blockquote>
 <p><strong>Schematic</strong></p>
-<div class="figure">
-<img src="https://www.wilber.co.ke/img/cust_vrf.png" style="width:70.0%" />
-
-</div>
+<p><img src="https://www.wilber.co.ke/img/cust_vrf.png" style="width:70.0%" /></p>
 <table>
 <thead>
 <tr class="header">
@@ -368,7 +361,9 @@ router eigrp SIPoMPLS
   network 10.221.0.0 0.0.0.3
   network 172.30.1.0 0.0.0.3
 !</code></pre>
-<p><em>PBX will terminate on interface F0/2; directly or through a LAN switch. PBX port will be configured on the block range: on this example, the pbx IP will be 10.100.0.2/30 with a default gateway of 10.100.0.1 The block should be able to ping the SBC private MPLS IPs (Signaling and Media)</em></p>
+<p><em>PBX will terminate on interface F0/2; directly or through a LAN switch.
+PBX port will be configured on the block range: on this example, the pbx IP will be 10.100.0.2/30 with a default gateway of 10.100.0.1
+The block should be able to ping the SBC private MPLS IPs (Signaling and Media)</em></p>
 <p><strong>Deployment Model #2</strong> - NAT</p>
 <center>
 <img src="https://www.wilber.co.ke/img/cust_ce_opt2.png" alt="." style="width:70.0%" />
