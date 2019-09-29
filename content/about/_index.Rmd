@@ -3,9 +3,9 @@ title: "About"
 output:
   html_document: default
 ---
-<p style="text-align:center;">I don’t do prose well. My brain just doesn’t work that way. I reason things out by building prototypes.</p>
+<p style="text-align:center;">**I don’t do prose well. My brain just doesn’t work that way. I reason things out by building prototypes.**</p>
 
-<p style="text-align:center;">Contact me through email at [hello@wilber.co.ke](mailto:hello@wilber.co.ke)</p>
+<p style="text-align:center;">**Contact me through email at [hello@wilber.co.ke](mailto:hello@wilber.co.ke)**</p>
 
 ---
 
@@ -18,9 +18,7 @@ output:
 ---
 
 <p style="text-align:center;">
-You can download my latest resume <a href="/WilberforceOchiengWanjira_CV.pdf">here</a>
-
-For my complete and unabridged experience, please visit my [LinkedIn](https://www.linkedin.com/in/wilberwanjira/)
+**You can download my latest resume <a href="/WilberforceOchiengWanjira_CV.pdf">here.</a> For my complete and unabridged experience, please visit my [LinkedIn](https://www.linkedin.com/in/wilberwanjira/)**
 </p>
 
 ---
