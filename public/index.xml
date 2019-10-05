@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Networks, Scripts, Musings</title>
@@ -10,44 +9,35 @@
     <atom:link href="https://www.wilber.co.ke/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Engineering Reads</title>
-      <link>https://www.wilber.co.ke/post/engineering-reads.html</link>
+      <title>Posts</title>
+      <link>https://www.wilber.co.ke/post.html</link>
       <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.wilber.co.ke/post/engineering-reads.html</guid>
-      <description>A list of good reads I believe every Engineer should read through in striving to be a better Engineer. Will likely organize these better down the line.
-Image courtesy of Patrick Tomasso
-Books Apollo How to do a bunch of “ambitious” things with lots of talented folks and quickly at that! Here’s a fantastic video presentation on the Apollo Guidance Computer(AGC). Some fun facts:
- AGC didn’t have room for code to enforce invariants AGC first human interactive interface AGC first priority scheduler   My favourite titbits: Engineers reported to engineers, metrics deck/project deck used to coordinate decentralized organization.</description>
+      <guid>https://www.wilber.co.ke/post.html</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>iAmAlive Script ( APIC-EM &amp; Tropo API )</title>
-      <link>https://www.wilber.co.ke/post/iamalive-script-cisco-apic-em-tropo-api.html</link>
-      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
+      <title>About</title>
+      <link>https://www.wilber.co.ke/about.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.wilber.co.ke/post/iamalive-script-cisco-apic-em-tropo-api.html</guid>
-      <description>iAmAlive Script iAmAlive script confirms if a host is reachable and triggers a collaborative action via Tropo; Tropo will send an sms to the network admin if the host is reachable or call the network admin if the host is unreachable.
-The idea is to demonstrate the capabilities of APIC-EM 1 as well as Tropo APIs and how they can be leveraged on to facilitate collaboration within distributed teams.
- Flow  Prerequisites  Python Tropo Account with Outbound SMS and Call capabilities Access to an APIC-EM Platform 2   Code  configuration file (iAmAlive_config.</description>
+      <guid>https://www.wilber.co.ke/about.html</guid>
+      <description> I don’t do prose well. My brain just doesn’t work that way. I reason things out by building prototypes. Contact me through email at hello@wilber.co.ke You can download my latest resume here. For my complete and unabridged experience, please visit my LinkedIn </description>
     </item>
     
     <item>
-      <title>The Internet Of Things [ IoT ]</title>
-      <link>https://www.wilber.co.ke/post/the-internet-of-things-iot.html</link>
-      <pubDate>Tue, 10 May 2016 00:00:00 +0000</pubDate>
+      <title>Projects</title>
+      <link>https://www.wilber.co.ke/projects.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.wilber.co.ke/post/the-internet-of-things-iot.html</guid>
-      <description>Internet of Things – a conjunction of three simple words that form an invisible yet supporting realm that coexists in the shadows of our dimension. If you have lived through the 80s and/or the 90s, you might have co-experienced the advent and “rise-to-power” of the internet. You might also be able to recall how you loved (or hated) to establish a dial-up internet connection over your telephone line and would shriek with sheer joy (if you got an acceptable connection rate) or despair (if your connection was as slow as snail mail).</description>
-    </item>
-    
-    <item>
-      <title>SIP over MPLS - Service Implementation</title>
-      <link>https://www.wilber.co.ke/post/sip-over-mpls-service-implementation.html</link>
-      <pubDate>Mon, 17 Aug 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wilber.co.ke/post/sip-over-mpls-service-implementation.html</guid>
-      <description>Wilber O. Wanjira1 and Juma O. Kevin2 Principal Engineer - Integration1 and Senior Engineer - Core Planning (Voice)2  Introduction In this document, we share the deployed network architecture to provide SIP over MPLS. This model adopts the SIP protocol as signaling to set up a call and MPLS as a core network forwarding mechanism. SIP over MPLS will provide an alternative to SIP over dedicated Internet Access (the current and more typical deployment approach).</description>
+      <guid>https://www.wilber.co.ke/projects.html</guid>
+      <description>Oneoak Focus on solving core human problems. We support companies and founders with an ambitious vision to disrupt industries and improve people&#39;s lives through technology. We are looking for new opportunities in the healthcare and technology sector
+Link (broken)：invest.oneoak
+ PharmOnMobile Link (broken)：pom
+ Assembli Link (broken)：assembli.africa
+ Wavelogic Wavelogic is a technology consulting company that helps Kenyan business owners stay on the cusp of modern day technology.
+Link：</description>
     </item>
     
   </channel>

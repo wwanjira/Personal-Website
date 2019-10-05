@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Books</title>
+      <title>books</title>
       <link>https://www.wilber.co.ke/categories/books.html</link>
       <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
       
@@ -21,25 +21,7 @@
     </item>
     
     <item>
-      <title>Cisco</title>
-      <link>https://www.wilber.co.ke/categories/cisco.html</link>
-      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wilber.co.ke/categories/cisco.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Doc</title>
-      <link>https://www.wilber.co.ke/categories/doc.html</link>
-      <pubDate>Mon, 17 Aug 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wilber.co.ke/categories/doc.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Engineer</title>
+      <title>engineer</title>
       <link>https://www.wilber.co.ke/categories/engineer.html</link>
       <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
       
@@ -48,7 +30,7 @@
     </item>
     
     <item>
-      <title>Engineering</title>
+      <title>engineering</title>
       <link>https://www.wilber.co.ke/categories/engineering.html</link>
       <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
       
@@ -57,43 +39,7 @@
     </item>
     
     <item>
-      <title>Internet of Things</title>
-      <link>https://www.wilber.co.ke/categories/internet-of-things.html</link>
-      <pubDate>Tue, 10 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wilber.co.ke/categories/internet-of-things.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Iot</title>
-      <link>https://www.wilber.co.ke/categories/iot.html</link>
-      <pubDate>Tue, 10 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wilber.co.ke/categories/iot.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Networks</title>
-      <link>https://www.wilber.co.ke/categories/networks.html</link>
-      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wilber.co.ke/categories/networks.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://www.wilber.co.ke/categories/python.html</link>
-      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wilber.co.ke/categories/python.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reads</title>
+      <title>reads</title>
       <link>https://www.wilber.co.ke/categories/reads.html</link>
       <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
       
@@ -102,7 +48,34 @@
     </item>
     
     <item>
-      <title>Scripts</title>
+      <title>cisco</title>
+      <link>https://www.wilber.co.ke/categories/cisco.html</link>
+      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wilber.co.ke/categories/cisco.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>networks</title>
+      <link>https://www.wilber.co.ke/categories/networks.html</link>
+      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wilber.co.ke/categories/networks.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://www.wilber.co.ke/categories/python.html</link>
+      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wilber.co.ke/categories/python.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scripts</title>
       <link>https://www.wilber.co.ke/categories/scripts.html</link>
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       
@@ -111,20 +84,47 @@
     </item>
     
     <item>
-      <title>Service Provider</title>
-      <link>https://www.wilber.co.ke/categories/service-provider.html</link>
-      <pubDate>Mon, 17 Aug 2015 00:00:00 +0000</pubDate>
+      <title>internet of things</title>
+      <link>https://www.wilber.co.ke/categories/internet-of-things.html</link>
+      <pubDate>Tue, 10 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.wilber.co.ke/categories/service-provider.html</guid>
+      <guid>https://www.wilber.co.ke/categories/internet-of-things.html</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Writing</title>
+      <title>iot</title>
+      <link>https://www.wilber.co.ke/categories/iot.html</link>
+      <pubDate>Tue, 10 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wilber.co.ke/categories/iot.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>writing</title>
       <link>https://www.wilber.co.ke/categories/writing.html</link>
       <pubDate>Tue, 10 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.wilber.co.ke/categories/writing.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>doc</title>
+      <link>https://www.wilber.co.ke/categories/doc.html</link>
+      <pubDate>Mon, 17 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wilber.co.ke/categories/doc.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>service provider</title>
+      <link>https://www.wilber.co.ke/categories/service-provider.html</link>
+      <pubDate>Mon, 17 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wilber.co.ke/categories/service-provider.html</guid>
       <description></description>
     </item>
     
