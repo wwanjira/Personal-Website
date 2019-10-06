@@ -18,7 +18,7 @@ protocol = "https://"
 
 [params]
 	name = "Wilber Wanjira"
-	job = "Network Development Engineer"
+	job = "Computers"
 	description = "Networks, Scripts, Musings,"
 	bio = "[Networks](https://www.wilber.co.ke/categories/networks) | [Scripts](https://www.wilber.co.ke/categories/scripts) | [Writing](https://www.wilber.co.ke/categories/writing)"
 
