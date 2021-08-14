@@ -13,8 +13,9 @@
       <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.wilber.co.ke/post/building-a-flask-and-vue.js-web-application.html</guid>
-      <description>As you become more invested in your websites and web apps, you will probably want to add more client-side functionality and reactivity to them. Modern web development typically achieves this through the use of front-end frameworks.In this post, I explore the use of Flask and Vue to build a web app using Jinja templates.
-What is Flask? Flask is a microframework for creating web applications. This means Flask provides you with tools, libraries, and technologies that allow you to build a web application.</description>
+      <description>As you become more invested in your websites and web apps, you will probably want to add more client-side functionality and reactivity to them. Modern web development typically achieves this through the use of front-end frameworks. In this post, I explore the use of Flask and Vue to build a web app using Jinja templates.
+Image courtesy of Yancy Min
+What is Flask? Flask is a microframework for creating web applications.</description>
     </item>
     
   </channel>

@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_chunk$set(python.reticulate = FALSE)
 ```
 
-As you become more invested in your websites and web apps, you will probably want to add more client-side functionality and reactivity to them. Modern web development typically achieves this through the use of front-end frameworks.In this post, I explore the use of Flask and Vue to build a web app using Jinja templates.
+As you become more invested in your websites and web apps, you will probably want to add more client-side functionality and reactivity to them. Modern web development typically achieves this through the use of front-end frameworks. In this post, I explore the use of Flask and Vue to build a web app using Jinja templates.
 
 ![](/img/vue_header.jpeg)
 *Image courtesy of [Yancy Min](https://unsplash.com/@yancymin)*
