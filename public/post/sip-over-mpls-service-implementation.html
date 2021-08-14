@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Wilber Wanjira">
 		<meta name="description" content="Networks, Scripts, Musings,">
-		<meta name="generator" content="Hugo 0.59.0" />
+		<meta name="generator" content="Hugo 0.87.0" />
 		<title>SIP over MPLS - Service Implementation &middot; Networks, Scripts, Musings</title>
 		<link rel="shortcut icon" href="https://www.wilber.co.ke/images/favicon.ico">
 		<link rel="stylesheet" href="https://www.wilber.co.ke/css/style.css">
@@ -68,6 +68,7 @@
                 
                 <section id="post-body">
                     
+<script src="https://www.wilber.co.ke/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <center>
@@ -326,7 +327,7 @@ end-set
 </blockquote>
 <p><strong>Deployment Model #1</strong> - Link terminates on a Router. Customer PBX has WAN Port</p>
 <center>
-<img src="https://www.wilber.co.ke/img/cust_ce_opt1.png" alt="." style="width:70.0%" />
+<img src="https://www.wilber.co.ke/img/cust_ce_opt1.png" title="fig:" style="width:70.0%" alt="." />
 </center>
 <table>
 <thead>
@@ -369,7 +370,7 @@ PBX port will be configured on the block range: on this example, the pbx IP will
 The block should be able to ping the SBC private MPLS IPs (Signaling and Media)</em></p>
 <p><strong>Deployment Model #2</strong> - NAT</p>
 <center>
-<img src="https://www.wilber.co.ke/img/cust_ce_opt2.png" alt="." style="width:70.0%" />
+<img src="https://www.wilber.co.ke/img/cust_ce_opt2.png" title="fig:" style="width:70.0%" alt="." />
 </center>
 <table>
 <thead>
@@ -422,7 +423,7 @@ ip nat inside destination list 114 pool voip-rtp</code></pre>
 <p><em>Signaling port 5060 | Media Port Range 10000 - 20000</em></p>
 <p><strong>Deployment Model #3</strong> - Link terminates directly to PBX</p>
 <center>
-<img src="https://www.wilber.co.ke/img/cust_ce_opt3.png" alt="." style="width:70.0%" />
+<img src="https://www.wilber.co.ke/img/cust_ce_opt3.png" title="fig:" style="width:70.0%" alt="." />
 </center>
 <table>
 <thead>
@@ -521,7 +522,7 @@ ip nat inside destination list 114 pool voip-rtp</code></pre>
     
     <p class="small">
     
-       © Copyright 2019 <i class="fas fa-coffee"></i> Wilber Wanjira
+       © Copyright 2021 <i class="fas fa-coffee"></i> Wilber Wanjira
     
     </p>
 </footer>
@@ -552,7 +553,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
 
     </body>
 </html>

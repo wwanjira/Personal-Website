@@ -1,0 +1,400 @@
+    <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Wilber Wanjira">
+		<meta name="description" content="Networks, Scripts, Musings,">
+		<meta name="generator" content="Hugo 0.87.0" />
+		<title>Building a Flask &amp; Vue.js Web Application &middot; Networks, Scripts, Musings</title>
+		<link rel="shortcut icon" href="https://www.wilber.co.ke/images/favicon.ico">
+		<link rel="stylesheet" href="https://www.wilber.co.ke/css/style.css">
+		<link rel="stylesheet" href="https://www.wilber.co.ke/css/highlight.css">
+		
+		
+		<link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+		
+
+		
+		<link href="https://www.wilber.co.ke/index.xml" rel="alternate" type="application/rss+xml" title="Networks, Scripts, Musings" />
+		
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://www.wilber.co.ke/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://www.wilber.co.ke/projects'>Projects</a>
+	<a href='https://www.wilber.co.ke/tags'>Tags</a>
+	<a href='https://www.wilber.co.ke/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="https://www.wilber.co.ke/index.xml">Subscribe</a>
+	
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>
+                        Building a Flask &amp; Vue.js Web Application
+                    </h1>
+                    <h2 class="headline">
+                    Aug 12, 2021
+                    · 1165 words
+                    · 6 minutes read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://www.wilber.co.ke/tags/python">python</a>
+                          
+                              <a href="https://www.wilber.co.ke/tags/flask">flask</a>
+                          
+                              <a href="https://www.wilber.co.ke/tags/javascript">javascript</a>
+                          
+                              <a href="https://www.wilber.co.ke/tags/vue">vue</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+<script src="https://www.wilber.co.ke/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>As you become more invested in your websites and web apps, you will probably want to add more client-side functionality and reactivity to them. Modern web development typically achieves this through the use of front-end frameworks.In this post, I explore the use of Flask and Vue to build a web app using Jinja templates.</p>
+<div id="what-is-flask" class="section level2">
+<h2><strong>What is Flask?</strong></h2>
+<p>Flask is a microframework for creating web applications. This means Flask provides you with tools, libraries, and technologies that allow you to build a web application. This web application can be some web pages, a blog, a wiki or go as substantive as a web-based calendar application or a commercial website.</p>
+<p>For those of you who want to deep dive here are a few helpful links:</p>
+<ul>
+<li><a href="https://flask.palletsprojects.com/en/2.0.x/">Flask documentation</a></li>
+<li><a href="https://codeburst.io/flask-for-dummies-a-beginners-guide-to-flask-part-uno-53aec6afc5b1">Flask for Dummies - A Beginner’s Guide to Flask</a></li>
+</ul>
+<p><br/></p>
+</div>
+<div id="what-is-vue.js" class="section level2">
+<h2><strong>What is Vue.js?</strong></h2>
+<p>Vue is a modern JavaScript framework that provides useful facilities for progressive enhancement — unlike many other frameworks, you can use Vue to enhance existing HTML. This lets you use Vue as a drop-in replacement for a library like JQuery.</p>
+<p>That being said, you can also use Vue to write entire Single Page Applications (SPAs). This allows you to create markup managed entirely by Vue, which can improve developer experience and performance when dealing with complex applications.</p>
+<p>For a good (but potentially biased) comparison between Vue and many of the other frameworks, see <a href="https://vuejs.org/v2/guide/comparison.html">Vue Docs: Comparison with Other Frameworks.</a></p>
+</div>
+<div id="combining-flask-and-vue.js" class="section level2">
+<h2><strong>Combining Flask and Vue.js</strong></h2>
+<p>Depending on your project’s requirements, there are a few different ways to build a web application with Flask and Vue, and they each involve various levels of back-end and front-end separation.</p>
+<p>In this post, we’ll take a look at using <strong>Jinja Templates</strong> to import vue into your application</p>
+<div id="jinja-template" class="section level3">
+<h3><strong>Jinja Template</strong></h3>
+<p>In many cases, when you’re building a front-end for your web app, you design it around the front-end framework itself. With this method, however, the focus is still on your back-end Flask application. You’ll still use Jinja and server-side templating along with a bit of reactive functionality with Vue if and when you need it.</p>
+<p>You can import the Vue library either through a Content Delivery Network (CDN) or by serving it yourself along with your app, while setting up and routing Flask as you normally would.</p>
+<p><img src="https://www.wilber.co.ke/img/flask_vue_flowchart.png" /></p>
+</div>
+<div id="dependencies" class="section level3">
+<h3><strong>Dependencies</strong></h3>
+<p>Vue libraries and Bootstrap JavaScript plugin which can be added via jsDelivr, a free open source CDN:</p>
+<pre><code>&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;</code></pre>
+<p><br/></p>
+</div>
+<div id="setup" class="section level3">
+<h3><strong>Setup</strong></h3>
+<p>Create a folder to hold all of your app’s code. Inside of that folder, create an app.py file as you would normally:</p>
+<pre class="python"><code>import json
+from flask import Flask, render_template
+
+# configuration
+DEBUG = True
+
+# instantiate the app
+app = Flask(__name__)
+app.config.from_object(__name__)
+
+# definitions
+SITE = {
+        &#39;logo&#39;: &#39;FLASK-VUE&#39;,
+        &#39;version&#39;: &#39;0.0.1&#39;
+}
+
+OWNER = {
+        &#39;name&#39;: &#39;Wilber Wanjira&#39;,
+        &#39;website&#39;: &#39;https://wilber.co.ke&#39;
+}
+
+# pass data to the frontend
+site_data = {
+    &#39;site&#39;: SITE,
+    &#39;owner&#39;: OWNER
+}
+
+# landing page
+@app.route(&#39;/&#39;)
+def welcome():
+  return render_template(&#39;index.html&#39;, **site_data)
+
+
+if __name__ == &#39;__main__&#39;:
+    app.run()</code></pre>
+<p>We only need to import <code>Flask</code> and <code>render_template</code> from <code>flask</code>.</p>
+<p>The <code>site_data</code> variable will come up again in a second when we look at how to render variables with both Jinja and Vue in the same file.</p>
+<p>Next, create a “templates” folder with a <em>index.html</em> file . In the body of the HTML file, create a container div with an id of <code>app</code>.</p>
+<p>Here’s what we have so far:</p>
+<pre><code>&lt;body&gt;
+    &lt;div id=&quot;app&quot;&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+<br />
+Before the end of the body tag, import Vue and Bootstrap JavaScript plugin along with a script to hold our JavaScript code. Also, import the Bootstrap stylesheet into your
+<head>
+<p>before all other stylesheets to load our CSS.</p>
+<pre><code>&lt;head&gt;
+    &lt;title&gt;Flask Vue&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;app&quot;&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;{{ url_for(&#39;static&#39;, filename=&#39;index.js&#39;) }}&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+<p>Navigating up a directory, create a “static” folder and add a new JavaScript file called <em>index.js</em> and create the Vue context</p>
+<pre class="bash"><code>const app = new Vue({
+    el: &#39;#app&#39;,
+})</code></pre>
+<p>Your final folder structure should look something like:</p>
+<pre class="bash"><code>├───app.py
+├───static
+│   └───index.js
+└───templates
+    └───index.html</code></pre>
+<p>Next, we will create three Vue components and place them in index.js</p>
+<blockquote>
+<p>Components are reusable Vue instances with a name: in this case, we will create three components namely; <strong>my-nav-bar</strong>, <strong>my-hero</strong> and <strong>my-footer</strong>. We will use these components as custom elements inside the root Vue instance, <strong>app</strong>, that we earlier created with <em>new Vue</em>. You can read more about components on <a href="https://vuejs.org/v2/guide/components.html">Components Basics</a></p>
+</blockquote>
+<ul>
+<li><strong><code>my-nav-bar</code></strong> component</li>
+</ul>
+<pre class="bash"><code>Vue.component(&#39;my-nav-bar&#39;, {
+  props: [&#39;site&#39;],
+  data: function() {
+      return  {
+          search: &#39;&#39;,
+      }
+  },
+  methods: {
+      searchMe: function () {
+          console.log(this.search)
+      }
+  },
+  computed: {
+      logo() {
+          site_logo = &#39;MySite&#39;
+          for(const property in this.site) {
+              if (property == &#39;logo&#39;) {
+                  site_logo = `${this.site[property]}`;
+                  break;
+              }
+          }
+          return site_logo;
+      }
+  },
+  template: `
+      &lt;nav class=&quot;navbar navbar-light bg-light&quot;&gt;
+          &lt;div class=&quot;container-fluid&quot;&gt;
+              &lt;a class=&quot;navbar-brand bg-success p-1 text-light shadow&quot;&gt;{{ logo }}&lt;/a&gt;
+              &lt;form class=&quot;d-flex&quot; v-on:submit.prevent=&quot;searchMe&quot;&gt;
+                  &lt;input class=&quot;form-control me-2&quot; type=&quot;search&quot; placeholder=&quot;Search&quot; aria-label=&quot;Search&quot; v-model=&quot;search&quot; /&gt;
+                  &lt;button class=&quot;btn btn-outline-success&quot; type=&quot;submit&quot;&gt;Search&lt;/button&gt;
+              &lt;/form&gt;
+          &lt;/div&gt;
+      &lt;/nav&gt;
+  `
+});</code></pre>
+<p> </p>
+<ul>
+<li><strong><code>my-hero</code></strong> component</li>
+</ul>
+<pre class="bash"><code>Vue.component(&#39;my-hero&#39;, {
+  template: `
+    &lt;div class=&quot;jumbotron container m-5&quot;&gt;
+        &lt;h1 class=&quot;display-4&quot;&gt;Hello, world!&lt;/h1&gt;
+        &lt;p class=&quot;lead&quot;&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book&lt;/p&gt;
+        &lt;hr class=&quot;my-4&quot; /&gt;
+        &lt;p&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.&lt;/p&gt;
+        &lt;p class=&quot;lead&quot;&gt;
+            &lt;a class=&quot;btn btn-success btn-lg&quot; href=&quot;wilber.co.ke&quot; role=&quot;button&quot;&gt;Learn more&lt;/a&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+  `
+});</code></pre>
+<p> </p>
+<ul>
+<li><strong><code>my-footer</code></strong> component</li>
+</ul>
+<pre class="bash"><code>Vue.component(&#39;my-footer&#39;, {
+  props: [&#39;owner&#39;, &#39;site&#39;],
+  computed: {
+      name() {
+          site_owner = &#39;You&#39;
+          for(const property in this.owner) {
+              if (property == &#39;name&#39;) {
+                  site_owner = `${this.owner[property]}`;
+                  break
+              }
+          }
+          return site_owner;
+      },
+      website() {
+          website = &#39;&#39;
+          for(const property in this.owner) {
+              if (property == &#39;website&#39;) {
+                  website = `${this.owner[property]}`;
+                  break
+              }
+          }
+          return website;
+      }
+  },
+  template: `
+    &lt;footer class=&quot;footer mt-auto py-3 bg-light&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;span class=&quot;text-muted mx-2&quot;&gt;&lt;strong&gt;🇰🇪 {{ name }}&lt;/strong&gt;&lt;/span&gt;
+            &lt;a href=&quot;&quot;&gt;&lt;small&gt;{{ website }}&lt;/small&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+  `
+});</code></pre>
+<p> 
+Next, we will add <code>my-nav-bar</code>, <code>my-hero</code> and <code>my-footer</code> vue components into our <code>index.html</code> file and pass along our <code>site_data</code> props (defined in Flask <code>app.py</code> file) as necesarry.</p>
+<pre class="bash"><code>    &lt;div id=&quot;app&quot;&gt;
+        &lt;my-nav-bar :site=&quot;{{ site }}&quot;&gt;&lt;/my-nav-bar&gt;
+        &lt;my-hero&gt;&lt;/my-hero&gt;
+        &lt;`my-footer :version=&quot;{{ site}}&quot; :owner=&quot;{{ owner }}&quot;&gt;&lt;/my-footer&gt;
+    &lt;/div&gt;</code></pre>
+<p> 
+Now you can go back to you root project folder and run the app with <code>flask run</code>. Navigate to the site in your browser. You should see all our vue components in the Flask app.</p>
+<p><img src="https://www.wilber.co.ke/img/flask_vue_final.png" /></p>
+<p>That’s it! With each additional HTML page, you’ll have to either import the same JavaScript file and account for variables and elements that may not apply to it or create a new Vue object for each page. A true SPA will be difficult, but not impossible.</p>
+<p>Hopefully this post gives you an idea about how to combine your Vue and Flask applications.</p>
+<p>You can grab the final code from my <a href="https://github.com/wwanjira/vue-flask-playground">vue-flask-playground</a> repo on GitHub.</p>
+</div>
+</div>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://github.com/wwanira">
+                        <img class="avatar" src="https://www.wilber.co.ke/images/avatar.png">
+                        <div>
+                            <span class="dark">Wilber Wanjira</span>
+                            <span>Network Development Engineer</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    
+<a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fwww.wilber.co.ke%2fpost%2fbuilding-a-flask-and-vue.js-web-application.html - Building%20a%20Flask%20%26%20Vue.js%20Web%20Application "><span class="icon-twitter"> Tweet</span></a>
+
+
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'wilberwanjira'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://github.com/wwanjira">
+        <i class="fab fa-github-square fa-sm"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/wilberwanjira/">
+        <i class="fab fa-linkedin fa-sm"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/iam_wilber">
+        <i class="fab fa-twitter-square fa-sm"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2021 <i class="fas fa-coffee"></i> Wilber Wanjira
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script async src="//yihui.name/js/center-img.js"></script>
+<script src="https://www.wilber.co.ke/js/jquery-2.2.4.min.js"></script>
+<script src="https://www.wilber.co.ke/js/main.js"></script>
+<script src="https://www.wilber.co.ke/js/highlight.pack.js"></script>
+<script>hljs.configure({languages: []});
+hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-116430629-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    </body>
+</html>

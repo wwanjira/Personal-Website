@@ -6,10 +6,42 @@
     <description>Recent content in Tags on Networks, Scripts, Musings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wilber.co.ke/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>flask</title>
+      <link>https://www.wilber.co.ke/tags/flask.html</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wilber.co.ke/tags/flask.html</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="https://www.wilber.co.ke/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>javascript</title>
+      <link>https://www.wilber.co.ke/tags/javascript.html</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wilber.co.ke/tags/javascript.html</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>python</title>
+      <link>https://www.wilber.co.ke/tags/python.html</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wilber.co.ke/tags/python.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue</title>
+      <link>https://www.wilber.co.ke/tags/vue.html</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wilber.co.ke/tags/vue.html</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>books</title>
@@ -71,15 +103,6 @@
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://www.wilber.co.ke/tags/networks.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://www.wilber.co.ke/tags/python.html</link>
-      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wilber.co.ke/tags/python.html</guid>
       <description></description>
     </item>
     

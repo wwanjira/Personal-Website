@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>flask on Networks, Scripts, Musings</title>
+    <link>https://www.wilber.co.ke/tags/flask.html</link>
+    <description>Recent content in flask on Networks, Scripts, Musings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wilber.co.ke/tags/flask/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Flask &amp; Vue.js Web Application</title>
+      <link>https://www.wilber.co.ke/post/building-a-flask-and-vue.js-web-application.html</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wilber.co.ke/post/building-a-flask-and-vue.js-web-application.html</guid>
+      <description>As you become more invested in your websites and web apps, you will probably want to add more client-side functionality and reactivity to them. Modern web development typically achieves this through the use of front-end frameworks.In this post, I explore the use of Flask and Vue to build a web app using Jinja templates.
+What is Flask? Flask is a microframework for creating web applications. This means Flask provides you with tools, libraries, and technologies that allow you to build a web application.</description>
+    </item>
+    
+  </channel>
+</rss>

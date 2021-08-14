@@ -1,0 +1,289 @@
+---
+title: "Building a Flask & Vue.js Web Application"
+author: "Wilber"
+date: "2021-08-12"
+output: html_document
+slug: building-a-flask-and-vue.js-web-application
+description: I explore the use of Flask and Vue to build a web app using Jinja templates.
+tags:
+- python
+- flask
+- javascript
+- vue
+categories:
+- javascript
+- python
+- vue
+- flask
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(python.reticulate = FALSE)
+```
+
+As you become more invested in your websites and web apps, you will probably want to add more client-side functionality and reactivity to them. Modern web development typically achieves this through the use of front-end frameworks.In this post, I explore the use of Flask and Vue to build a web app using Jinja templates.
+
+## **What is Flask?**
+
+Flask is a microframework for creating web applications. This means Flask provides you with tools, libraries, and technologies that allow you to build a web application. This web application can be some web pages, a blog, a wiki or go as substantive as a web-based calendar application or a commercial website.
+
+For those of you who want to deep dive here are a few helpful links:
+
+* [Flask documentation](https://flask.palletsprojects.com/en/2.0.x/)
+* [Flask for Dummies - A Beginner's Guide to Flask](https://codeburst.io/flask-for-dummies-a-beginners-guide-to-flask-part-uno-53aec6afc5b1)
+
+<br/>
+
+## **What is Vue.js?**
+
+Vue is a modern JavaScript framework that provides useful facilities for progressive enhancement — unlike many other frameworks, you can use Vue to enhance existing HTML. This lets you use Vue as a drop-in replacement for a library like JQuery.
+
+That being said, you can also use Vue to write entire Single Page Applications (SPAs). This allows you to create markup managed entirely by Vue, which can improve developer experience and performance when dealing with complex applications.
+
+For a good (but potentially biased) comparison between Vue and many of the other frameworks, see [Vue Docs: Comparison with Other Frameworks.](https://vuejs.org/v2/guide/comparison.html)
+
+## **Combining Flask and Vue.js**
+
+Depending on your project's requirements, there are a few different ways to build a web application with Flask and Vue, and they each involve various levels of back-end and front-end separation.
+
+In this post, we'll take a look at using **Jinja Templates** to import vue into your application
+
+### **Jinja Template**
+
+In many cases, when you're building a front-end for your web app, you design it around the front-end framework itself. With this method, however, the focus is still on your back-end Flask application. You'll still use Jinja and server-side templating along with a bit of reactive functionality with Vue if and when you need it.
+
+You can import the Vue library either through a Content Delivery Network (CDN) or by serving it yourself along with your app, while setting up and routing Flask as you normally would.
+
+![](/img/flask_vue_flowchart.png)
+
+### **Dependencies**
+
+Vue libraries and Bootstrap JavaScript plugin which can be added via jsDelivr, a free open source CDN:
+
+```` `r ''`
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+````
+<br/>
+
+### **Setup**
+
+Create a folder to hold all of your app's code. Inside of that folder, create an app.py file as you would normally:
+
+```{python eval=FALSE}
+import json
+from flask import Flask, render_template
+
+# configuration
+DEBUG = True
+
+# instantiate the app
+app = Flask(__name__)
+app.config.from_object(__name__)
+
+# definitions
+SITE = {
+        'logo': 'FLASK-VUE',
+        'version': '0.0.1'
+}
+
+OWNER = {
+        'name': 'Wilber Wanjira',
+        'website': 'https://wilber.co.ke'
+}
+
+# pass data to the frontend
+site_data = {
+    'site': SITE,
+    'owner': OWNER
+}
+
+# landing page
+@app.route('/')
+def welcome():
+  return render_template('index.html', **site_data)
+
+
+if __name__ == '__main__':
+    app.run()
+```
+
+We only need to import `Flask` and `render_template` from `flask`.
+
+The `site_data` variable will come up again in a second when we look at how to render variables with both Jinja and Vue in the same file.
+
+Next, create a "templates" folder with a *index.html* file . In the body of the HTML file, create a container div with an id of `app`.
+
+Here's what we have so far:
+
+```` `r ''`
+<body>
+    <div id="app">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+````  
+<br />
+Before the end of the body tag, import Vue and Bootstrap JavaScript plugin along with a script to hold our JavaScript code. Also, import the Bootstrap stylesheet into your <head> before all other stylesheets to load our CSS.
+
+```` `r ''`
+<head>
+    <title>Flask Vue</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+````
+Navigating up a directory, create a "static" folder and add a new JavaScript file called *index.js* and create the Vue context
+
+
+```{bash eval=FALSE}
+const app = new Vue({
+    el: '#app',
+})
+```
+
+Your final folder structure should look something like:
+```{bash eval=FALSE}
+├───app.py
+├───static
+│   └───index.js
+└───templates
+    └───index.html
+```
+
+Next, we will create three Vue components and place them in index.js
+
+> Components are reusable Vue instances with a name: in this case, we will create three components namely; **my-nav-bar**, **my-hero** and **my-footer**. We will use these components as custom elements inside the root Vue instance, **app**, that we earlier created with *new Vue*. You can read more about components on [Components Basics](https://vuejs.org/v2/guide/components.html)
+
+* **`my-nav-bar`** component
+
+```{bash eval=FALSE}
+Vue.component('my-nav-bar', {
+  props: ['site'],
+  data: function() {
+      return  {
+          search: '',
+      }
+  },
+  methods: {
+      searchMe: function () {
+          console.log(this.search)
+      }
+  },
+  computed: {
+      logo() {
+          site_logo = 'MySite'
+          for(const property in this.site) {
+              if (property == 'logo') {
+                  site_logo = `${this.site[property]}`;
+                  break;
+              }
+          }
+          return site_logo;
+      }
+  },
+  template: `
+      <nav class="navbar navbar-light bg-light">
+          <div class="container-fluid">
+              <a class="navbar-brand bg-success p-1 text-light shadow">{{ logo }}</a>
+              <form class="d-flex" v-on:submit.prevent="searchMe">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" v-model="search" />
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+          </div>
+      </nav>
+  `
+});
+```
+&nbsp;
+
+* **`my-hero`** component
+
+```{bash eval=FALSE}
+Vue.component('my-hero', {
+  template: `
+    <div class="jumbotron container m-5">
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+        <hr class="my-4" />
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        <p class="lead">
+            <a class="btn btn-success btn-lg" href="wilber.co.ke" role="button">Learn more</a>
+        </p>
+    </div>
+  `
+});
+```
+&nbsp;
+
+* **`my-footer`** component
+
+```{bash eval=FALSE}
+Vue.component('my-footer', {
+  props: ['owner', 'site'],
+  computed: {
+      name() {
+          site_owner = 'You'
+          for(const property in this.owner) {
+              if (property == 'name') {
+                  site_owner = `${this.owner[property]}`;
+                  break
+              }
+          }
+          return site_owner;
+      },
+      website() {
+          website = ''
+          for(const property in this.owner) {
+              if (property == 'website') {
+                  website = `${this.owner[property]}`;
+                  break
+              }
+          }
+          return website;
+      }
+  },
+  template: `
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted mx-2"><strong>🇰🇪 {{ name }}</strong></span>
+            <a href=""><small>{{ website }}</small></a>
+        </div>
+    </footer>
+  `
+});
+```
+&nbsp;
+Next, we will add `my-nav-bar`, `my-hero` and `my-footer` vue components into our `index.html` file and pass along our `site_data` props (defined in Flask `app.py` file) as necesarry.
+
+```{bash eval=FALSE}
+    <div id="app">
+        <my-nav-bar :site="{{ site }}"></my-nav-bar>
+        <my-hero></my-hero>
+        <`my-footer :version="{{ site}}" :owner="{{ owner }}"></my-footer>
+    </div>
+```
+&nbsp;
+Now you can go back to you root project folder and run the app with `flask run`. Navigate to the site in your browser. You should see all our vue components in the Flask app.
+
+![](/img/flask_vue_final.png)
+
+That's it! With each additional HTML page, you'll have to either import the same JavaScript file and account for variables and elements that may not apply to it or create a new Vue object for each page. A true SPA will be difficult, but not impossible.
+
+Hopefully this post gives you an idea about how to combine your Vue and Flask applications.
+
+You can grab the final code from my [vue-flask-playground](https://github.com/wwanjira/vue-flask-playground) repo on GitHub.
+
+
