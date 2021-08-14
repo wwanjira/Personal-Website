@@ -24,6 +24,9 @@ knitr::opts_chunk$set(python.reticulate = FALSE)
 
 As you become more invested in your websites and web apps, you will probably want to add more client-side functionality and reactivity to them. Modern web development typically achieves this through the use of front-end frameworks.In this post, I explore the use of Flask and Vue to build a web app using Jinja templates.
 
+![](/img/vue_header.jpeg)
+*Image courtesy of [Yancy Min](https://unsplash.com/@yancymin)*
+
 ## **What is Flask?**
 
 Flask is a microframework for creating web applications. This means Flask provides you with tools, libraries, and technologies that allow you to build a web application. This web application can be some web pages, a blog, a wiki or go as substantive as a web-based calendar application or a commercial website.
